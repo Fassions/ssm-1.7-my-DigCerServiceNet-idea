@@ -1,0 +1,1801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - digcerservicenetv2@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="digcerservicenetv2">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="digcerservicenetv1_2"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="performance_schema"/>
+    <schema id="6" name="test"/>
+    <schema id="7" name="audit"/>
+    <table id="8" parent="1" name="delivery_address">
+      <comment>收货地址信息表</comment>
+    </table>
+    <table id="9" parent="1" name="order">
+      <comment>订购单信息表</comment>
+    </table>
+    <table id="10" parent="1" name="order_express">
+      <comment>订购单快递关联表</comment>
+    </table>
+    <table id="11" parent="1" name="order_history_status">
+      <comment>订单状态历史记录表</comment>
+    </table>
+    <table id="12" parent="1" name="order_invoice">
+      <comment>订购单开票信息表</comment>
+    </table>
+    <table id="13" parent="1" name="order_invoice_product">
+      <comment>订单开票产品详情表</comment>
+    </table>
+    <table id="14" parent="1" name="order_memo">
+      <comment>订购单卖家备忘记录表</comment>
+    </table>
+    <table id="15" parent="1" name="order_message">
+      <comment>订购单留言记录表</comment>
+    </table>
+    <table id="16" parent="1" name="order_paid">
+      <comment>订购单到款日期信息表</comment>
+    </table>
+    <table id="17" parent="1" name="order_product">
+      <comment>订购单证书产品信息表</comment>
+    </table>
+    <table id="18" parent="1" name="tbl_area_info"/>
+    <table id="19" parent="1" name="tbl_area_label_prefix">
+      <comment>数字证书KEY标号前缀表</comment>
+    </table>
+    <table id="20" parent="1" name="tbl_product_list">
+      <comment>数字证书KEY标号后缀表</comment>
+    </table>
+    <table id="21" parent="1" name="tbl_role">
+      <comment>权限信息表</comment>
+    </table>
+    <table id="22" parent="1" name="user_info">
+      <comment>用户信息表</comment>
+    </table>
+    <table id="23" parent="1" name="user_logs">
+      <comment>用户操作日志表</comment>
+    </table>
+    <table id="24" parent="1" name="user_role">
+      <comment>权限用户关联表</comment>
+    </table>
+    <table id="25" parent="1" name="tbl_order_unit">
+      <comment>订购单位信息表</comment>
+    </table>
+    <table id="26" parent="1" name="tbl_template_excel">
+      <comment>自定义excel模板表</comment>
+    </table>
+    <table id="27" parent="1" name="tbl_production_product">
+      <comment>已售证书标号表</comment>
+    </table>
+    <table id="28" parent="1" name="order_upload_files">
+      <comment>订购单上传文件信息表</comment>
+    </table>
+    <table id="29" parent="1" name="tbl_area_label_suffix"/>
+    <table id="30" parent="1" name="tbl_home"/>
+    <table id="31" parent="1" name="tbl_order_report"/>
+    <table id="32" parent="1" name="order_electronic_invoice"/>
+    <table id="33" parent="1" name="order_production_memo"/>
+    <table id="34" parent="1" name="receipt_upload_files"/>
+    <table id="35" parent="1" name="order_invoice_express"/>
+    <table id="36" parent="1" name="tbl_report_task">
+      <comment>报表任务运行状态表</comment>
+    </table>
+    <routine id="37" parent="1" name="aa">
+      <routine-kind>PROCEDURE</routine-kind>
+    </routine>
+    <routine id="38" parent="1" name="sa">
+      <routine-kind>PROCEDURE</routine-kind>
+    </routine>
+    <column id="39" parent="8" name="id">
+      <comment>主键</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="40" parent="8" name="user_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="41" parent="8" name="order_unit_name">
+      <comment>订购单位名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="42" parent="8" name="purchaser">
+      <comment>订购人姓名</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="43" parent="8" name="purchaser_mobile">
+      <comment>订购联系人手机号</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="44" parent="8" name="purchaser_phone">
+      <comment>订购联系人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="45" parent="8" name="receive_unit_name">
+      <comment>收货单位名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="46" parent="8" name="receive_unit_address">
+      <comment>收货地址</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="47" parent="8" name="receive_name">
+      <comment>收货联系人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="48" parent="8" name="receive_mobile">
+      <comment>收货联系人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="49" parent="8" name="receive_phone">
+      <comment>收货人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="50" parent="8" name="standby_name">
+      <comment>备选联系人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="51" parent="8" name="standby_mobile">
+      <comment>备选联系人手机</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="52" parent="8" name="standby_phone">
+      <comment>备选联系人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="53" parent="8" name="is_default">
+      <comment>是否设为默认地址：0.否 1.是      (已弃用)</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="54" parent="8" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="55" parent="8" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="56" parent="8" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="57" parent="8" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="58" parent="8" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="59" parent="8" name="user_id">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="60" parent="8" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="61" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="62" parent="9" name="parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="63" parent="9" name="user_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="64" parent="9" name="flow_id">
+      <comment>流水号 (xx-0000)</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="65" parent="9" name="child_type">
+      <comment>是否开启子订单：0 否1 是</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="66" parent="9" name="province_code">
+      <comment>订购地区省</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="67" parent="9" name="city_code">
+      <comment>订购地区市</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="68" parent="9" name="order_type">
+      <comment>订单类型：0订购，1代购，2项目内，3赠送，4提前发货，5合同已包含，6.先货后款</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="69" parent="9" name="borrow_type">
+      <comment>订单是否开启借转销（0未开启 1已开启）</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="70" parent="9" name="order_status">
+      <comment>订单状态：(0.等待受理、1.已受理待汇款、7.已到款待生产2.生产中—未下单、2.1.生产中—已下单、2.2.生产中—已完成、3.发运中、4.完成、5.退回、6.作废)</comment>
+      <data-type>decimal(8,1)|0</data-type>
+    </column>
+    <column id="71" parent="9" name="order_invalid">
+      <comment>订单作废原因</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="72" parent="9" name="is_affirm">
+      <comment>被打回买家是否确认：0未确认，1已确认(默认)</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="73" parent="9" name="return_reason">
+      <comment>退回理由</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="74" parent="9" name="remitter_type">
+      <comment>汇款类型 0公司 1个人</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="75" parent="9" name="remitter">
+      <comment>汇款单位名称/汇款人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="76" parent="9" name="remark">
+      <comment>买家备注</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="77" parent="9" name="order_date">
+      <comment>订购日期</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="78" parent="9" name="product_total_count">
+      <comment>订单所有产品总数量(不计配件产品数量)</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="79" parent="9" name="product_total_amount">
+      <comment>订单所有产品总金额</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="80" parent="9" name="invoice_type">
+      <comment>发票类型 0.增值税专用发票,1.增值税普通发票</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="81" parent="9" name="submit_status">
+      <comment>提交状态 0未提交 1已提交</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="82" parent="9" name="need_invoice">
+      <comment>是否需要发票：0不需要，1需要</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="83" parent="9" name="need_before_invoice">
+      <comment>订单是否为先开发票：0后开票，1先开票 ，2.不开票</comment>
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="84" parent="9" name="order_invoice_status">
+      <comment>发票状态：0未开票，1已开票 ，2部分票据已开</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="85" parent="9" name="billing_date">
+      <comment>开票日期</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="86" parent="9" name="complate_type">
+      <comment>确认收货：0未确认，1用户确认2.系统确认</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="87" parent="9" name="file_name">
+      <comment>附件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="88" parent="9" name="file_server_name">
+      <comment>服务器文件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="89" parent="9" name="order_unit_name">
+      <comment>订购单位地址</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="90" parent="9" name="order_unit_address">
+      <comment>订购单位名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="91" parent="9" name="purchaser">
+      <comment>订购人姓名</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="92" parent="9" name="purchaser_mobile">
+      <comment>订购联系人手机号</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="93" parent="9" name="purchaser_phone">
+      <comment>订购联系人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="94" parent="9" name="receive_unit_name">
+      <comment>收货单位名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="95" parent="9" name="receive_unit_address">
+      <comment>收货地址</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="96" parent="9" name="receive_name">
+      <comment>收货联系人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="97" parent="9" name="receive_mobile">
+      <comment>收货联系人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="98" parent="9" name="receive_phone">
+      <comment>收货人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="99" parent="9" name="standby_name">
+      <comment>备选联系人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="100" parent="9" name="standby_mobile">
+      <comment>备选联系人手机</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="101" parent="9" name="standby_phone">
+      <comment>备选联系人电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="102" parent="9" name="address_setting">
+      <comment>收货地址设置选项：0.与订购基本信息同步  1.设置收货地址</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="103" parent="9" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="104" parent="9" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="105" parent="9" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="106" parent="9" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="107" parent="9" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="108" parent="9" name="production_error_status">
+      <comment>生产是否异常需要重新编辑 0正常 1异常</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="109" parent="9" name="city_code">
+      <columns>city_code</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="110" parent="9" name="province_code">
+      <columns>province_code</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="111" parent="9" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="112" parent="10" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="113" parent="10" name="order_id">
+      <comment>订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="114" parent="10" name="order_parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="115" parent="10" name="production_flow_id">
+      <comment>生产任务单号</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="116" parent="10" name="express_type">
+      <comment>快递发运物品：1.发票，2证书，3.证书与发票（一起邮寄）</comment>
+      <data-type>tinyint(8)|0</data-type>
+    </column>
+    <column id="117" parent="10" name="express_name">
+      <comment>快递公司名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="118" parent="10" name="express_no">
+      <comment>快递单号</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="119" parent="10" name="delivery_date">
+      <comment>发货日期</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="120" parent="10" name="express_message">
+      <comment>快递信息备注</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="121" parent="10" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="122" parent="10" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="123" parent="10" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="124" parent="10" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="125" parent="10" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="126" parent="10" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="127" parent="10" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="128" parent="11" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="129" parent="11" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="130" parent="11" name="order_parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="131" parent="11" name="history_status">
+      <comment>流转状态：(0.等待受理、1.已受理待汇款、2.生产中—未下单、2.1.生产中—已下单、2.2.生产中—已完成、3.发运中、4.完成、5.退回、6.作废 7.已到款待生产（在生产未下单之前）&#xd;
+10.确定下单，&#xd;
+11.管理员订单编辑保存&#xd;
+12.编辑保存到款信息操作&#xd;
+13.编辑保存快递信息操作&#xd;
+14.开启生产中订单重新审核操作&#xd;
+15.关闭生产中订单重新审核操作</comment>
+      <data-type>decimal(8,1)|0</data-type>
+    </column>
+    <column id="132" parent="11" name="order_invalid">
+      <comment>订单作废原因</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="133" parent="11" name="return_reason">
+      <comment>退回理由</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="134" parent="11" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="135" parent="11" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="136" parent="11" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="137" parent="11" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="138" parent="11" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="139" parent="11" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="140" parent="11" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="141" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="142" parent="12" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="143" parent="12" name="order_parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="144" parent="12" name="invoice_type">
+      <comment>发票类型：0.增值税专用发票,1.增值税普通发票 (已弃用 使用order表)</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="145" parent="12" name="invoice_unit_name">
+      <comment>开票单位全称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="146" parent="12" name="social_credit_code">
+      <comment>纳税人识别号（统一社会信用代码）</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="147" parent="12" name="deposit_bank">
+      <comment>开户行</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="148" parent="12" name="account">
+      <comment>账户</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="149" parent="12" name="address">
+      <comment>地址</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="150" parent="12" name="phone">
+      <comment>电话</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="151" parent="12" name="billing_date">
+      <comment>开票日期（已弃用，使用order表）</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="152" parent="12" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="153" parent="12" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="154" parent="12" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="155" parent="12" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="156" parent="12" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="157" parent="12" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="158" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="159" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="160" parent="13" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="161" parent="13" name="order_parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="162" parent="13" name="order_invoice_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="163" parent="13" name="order_product_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="164" parent="13" name="product_name">
+      <comment>产品名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="165" parent="13" name="product_type">
+      <comment>产品型号</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="166" parent="13" name="product_number">
+      <comment>开票数量</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="167" parent="13" name="product_price">
+      <comment>单价</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="168" parent="13" name="product_amount">
+      <comment>产品总金额</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="169" parent="13" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="170" parent="13" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="171" parent="13" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="172" parent="13" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="173" parent="13" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="174" parent="13" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="175" parent="14" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="176" parent="14" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="177" parent="14" name="memo">
+      <comment>备忘内容</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="178" parent="14" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="179" parent="14" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="180" parent="14" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="181" parent="14" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="182" parent="14" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="183" parent="14" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="184" parent="14" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="185" parent="15" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="186" parent="15" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="187" parent="15" name="user_id">
+      <comment>买家用户id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="188" parent="15" name="user_type">
+      <comment>用户类型：0买家 1卖家</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="189" parent="15" name="message">
+      <comment>留言内容</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="190" parent="15" name="is_warn">
+      <comment>是否需要提醒：0否 1是</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="191" parent="15" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="192" parent="15" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="193" parent="15" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="194" parent="15" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="195" parent="15" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="196" parent="15" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="197" parent="15" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="198" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="199" parent="16" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="200" parent="16" name="arrival_date">
+      <comment>到款日期</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="201" parent="16" name="arrival_amount">
+      <comment>到款金额</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="202" parent="16" name="is_total_arrival">
+      <comment>是否全部到款 0否 1是</comment>
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="203" parent="16" name="arrival_account">
+      <comment>到款账号 0.辰锐，1.三所</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="204" parent="16" name="remitter">
+      <comment>汇款单位名称/汇款人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="205" parent="16" name="arrival_message">
+      <comment>卖家到款备注内容</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="206" parent="16" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="207" parent="16" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="208" parent="16" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="209" parent="16" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="210" parent="16" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="211" parent="16" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="212" parent="17" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="213" parent="17" name="production_flow_id">
+      <comment>生产任务单号</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="214" parent="17" name="flow_number">
+      <comment>流水生产号（相同证书类型+型号+前缀编号相同 同一批一个字段流水号，不同去查有没有其他子订单，累加数值）</comment>
+      <data-type>decimal(10)|0</data-type>
+    </column>
+    <column id="215" parent="17" name="order_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="216" parent="17" name="order_parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="217" parent="17" name="product_list_id">
+      <comment>数字证书KEY标号后缀表Id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="218" parent="17" name="product_name">
+      <comment>产品类型名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="219" parent="17" name="supplier">
+      <comment>供货方 默认 3 辰锐</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="220" parent="17" name="product_type">
+      <comment>产品型号</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="221" parent="17" name="label_suffix">
+      <comment>产品标号后缀</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="222" parent="17" name="label_prefix">
+      <comment>产品标号前缀（证书省份开头）</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="223" parent="17" name="label_start">
+      <comment>证书起始编号</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="224" parent="17" name="label_end">
+      <comment>证书结束编号</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="225" parent="17" name="label_num_start">
+      <comment>产品数字部分开始编号 可识别累加。</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="226" parent="17" name="label_num_end">
+      <comment>产品数字部分结束编号 可识别累加。</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="227" parent="17" name="product_number">
+      <comment>数量</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="228" parent="17" name="product_price">
+      <comment>单价</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="229" parent="17" name="product_amount">
+      <comment>产品总金额</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="230" parent="17" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="231" parent="17" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="232" parent="17" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="233" parent="17" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="234" parent="17" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="235" parent="17" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="236" parent="17" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="237" parent="18" name="id">
+      <comment>区划ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="238" parent="18" name="parent_id">
+      <comment>父级ID</comment>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="239" parent="18" name="level_type">
+      <comment>级别</comment>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="240" parent="18" name="name">
+      <comment>全称</comment>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="241" parent="18" name="sale_manager">
+      <comment>销售经理</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="242" parent="18" name="sort_level">
+      <comment>分类等级 1.直辖市 2.省 3.台湾 4.自治区 5.行政区</comment>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <index id="243" parent="18" name="parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="244" parent="18" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="245" parent="19" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="246" parent="19" name="area_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="247" parent="19" name="prefix_name">
+      <comment>默认头部字段</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="248" parent="19" name="other_prefix">
+      <comment>证书头部 允许编码</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="249" parent="19" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="250" parent="19" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="251" parent="19" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="252" parent="19" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="253" parent="19" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="254" parent="19" name="countres_id">
+      <columns>area_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="255" parent="19" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="256" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(8)|0</data-type>
+    </column>
+    <column id="257" parent="20" name="product_name">
+      <comment>证书名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="258" parent="20" name="supplier">
+      <comment>供货方 默认 3 辰锐</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="259" parent="20" name="product_type">
+      <comment>产品型号</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="260" parent="20" name="label_suffix">
+      <comment>产品标号后缀</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="261" parent="20" name="level_type">
+      <comment>产品优先级</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="262" parent="20" name="on_sale">
+      <comment>产品是否在售 0否 1是 （默认）</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="263" parent="20" name="product_price">
+      <comment>产品单价如存在则用户无法更改，管理员允许更改。</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="264" parent="20" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="265" parent="20" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="266" parent="20" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="267" parent="20" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="268" parent="20" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="269" parent="20" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="270" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(8)|0</data-type>
+    </column>
+    <column id="271" parent="21" name="role_name">
+      <comment>角色名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="272" parent="21" name="role_description">
+      <comment>角色描述</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="273" parent="21" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="274" parent="21" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="275" parent="21" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="276" parent="21" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="277" parent="21" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="278" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="279" parent="22" name="id">
+      <comment>主键</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="280" parent="22" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="281" parent="22" name="user_name">
+      <comment>姓名</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="282" parent="22" name="certificate_code">
+      <comment>身份证</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="283" parent="22" name="user_type">
+      <comment>用户类型 0买家 1卖家</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="284" parent="22" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="285" parent="22" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="286" parent="22" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="287" parent="22" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="288" parent="22" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="289" parent="22" name="order_unit_name">
+      <comment>订购单位</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="290" parent="22" name="user_message">
+      <comment>用户备注</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <index id="291" parent="22" name="certificate_code">
+      <columns>certificate_code</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="292" parent="22" name="userId">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="293" parent="22" name="user_name">
+      <columns>user_name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="294" parent="22" name="PRIMARY">
+      <columns>id
+user_id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="295" parent="22" name="userId">
+      <columns>user_id</columns>
+      <underlying-index>userId</underlying-index>
+    </key>
+    <column id="296" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="297" parent="23" name="user_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="298" parent="23" name="cerSerno">
+      <comment>证书编码</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="299" parent="23" name="ip">
+      <comment>ip信息</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="300" parent="23" name="broswer_info">
+      <comment>用户log信息</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="301" parent="23" name="login_date">
+      <comment>登录时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="302" parent="23" name="logout_date">
+      <comment>登出时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="303" parent="23" name="login_type">
+      <comment>登录方式.1为通过数字证书登录,2为客户端跳转登录.</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="304" parent="23" name="logout_type">
+      <comment>登出方式.1为系统自动超时剔除,2为用户手动点击登出按钮或者直接关闭浏览器.</comment>
+      <data-type>int(8)|0</data-type>
+    </column>
+    <index id="305" parent="23" name="user_id">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="306" parent="23" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="307" parent="24" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="308" parent="24" name="user_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="309" parent="24" name="role_id">
+      <comment>1.超级管理员，2.生产管理员，3.财务管理员</comment>
+      <data-type>bigint(8)|0</data-type>
+    </column>
+    <column id="310" parent="24" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="311" parent="24" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="312" parent="24" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="313" parent="24" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="314" parent="24" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="315" parent="24" name="role_id">
+      <columns>role_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="316" parent="24" name="user_id">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="317" parent="24" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="318" parent="25" name="id">
+      <comment>订购单位id</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="319" parent="25" name="order_unit_name">
+      <comment>订购单位</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="320" parent="25" name="remark">
+      <comment>备注</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="321" parent="25" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="322" parent="25" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="323" parent="25" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="324" parent="25" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="325" parent="25" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="326" parent="25" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="327" parent="26" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="328" parent="26" name="user_id">
+      <comment>用户id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="329" parent="26" name="template_name">
+      <comment>自定义模板名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="330" parent="26" name="excel_field">
+      <comment>配置的excel 字段</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="331" parent="26" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="332" parent="26" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="333" parent="26" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="334" parent="26" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="335" parent="26" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="336" parent="26" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="337" parent="27" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="338" parent="27" name="product_list_id">
+      <comment>数字证书KEY标号类型Id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="339" parent="27" name="flow_id">
+      <comment>老数据流水号</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="340" parent="27" name="product_name">
+      <comment>产品类型名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="341" parent="27" name="label_prefix">
+      <comment>产品标号前缀（证书省份开头）</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="342" parent="27" name="label_suffix">
+      <comment>产品标号后缀</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="343" parent="27" name="supplier">
+      <comment>供货方 默认 3 辰锐</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="344" parent="27" name="label_start">
+      <comment>证书起始编号</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="345" parent="27" name="label_end">
+      <comment>证书结束编号</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="346" parent="27" name="label_num_start">
+      <comment>产品数字部分开始编号 可识别累加。</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="347" parent="27" name="label_num_end">
+      <comment>产品数字部分结束编号 可识别累加。</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="348" parent="27" name="production_date">
+      <comment>生产日期</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="349" parent="27" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="350" parent="27" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="351" parent="27" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="352" parent="27" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="353" parent="27" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="354" parent="27" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="355" parent="28" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="356" parent="28" name="order_id">
+      <comment>订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="357" parent="28" name="file_name">
+      <comment>附件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="358" parent="28" name="file_server_name">
+      <comment>服务器文件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="359" parent="28" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="360" parent="28" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="361" parent="28" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="362" parent="28" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="363" parent="28" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="364" parent="28" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="365" parent="29" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="366" parent="29" name="product_list_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="367" parent="29" name="label_prefix_id">
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="368" parent="29" name="supplier">
+      <comment>供货方 默认 3 辰锐</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="369" parent="29" name="product_type">
+      <comment>产品型号</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="370" parent="29" name="label_suffix">
+      <comment>产品标号后缀</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="371" parent="29" name="on_sale">
+      <comment>产品是否在售 0否 1是 （默认）</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="372" parent="29" name="product_price">
+      <comment>产品单价如存在则用户无法更改，管理员允许更改。</comment>
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="373" parent="29" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="374" parent="29" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="375" parent="29" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="376" parent="29" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="377" parent="29" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="378" parent="29" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="379" parent="30" name="id">
+      <comment>主键id</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="380" parent="30" name="file_label">
+      <comment>图标名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="381" parent="30" name="name">
+      <comment>首页文件名称不带后缀</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="382" parent="30" name="file_name">
+      <comment>首页文件全称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="383" parent="30" name="file_level">
+      <comment>文件优先级</comment>
+      <mandatory>1</mandatory>
+      <data-type>char(8)|0</data-type>
+    </column>
+    <column id="384" parent="30" name="file_server_name">
+      <comment>服务器文件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="385" parent="30" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="386" parent="30" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="387" parent="30" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="388" parent="30" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="389" parent="30" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="390" parent="30" name="PRIMARY">
+      <columns>id
+file_level</columns>
+      <primary>1</primary>
+    </key>
+    <column id="391" parent="31" name="id">
+      <comment>主键id</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="392" parent="31" name="task_id">
+      <comment>任务id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="393" parent="31" name="product_list_id">
+      <comment>数字证书KEY标号后缀表Id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="394" parent="31" name="builder_time">
+      <comment>报表统计生成时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="395" parent="31" name="start_time">
+      <comment>报表统计结果开始时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="396" parent="31" name="end_time">
+      <comment>报表统计结果结束时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="397" parent="31" name="file_status">
+      <comment>生成状态(0.生成中 1.完成)</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="398" parent="31" name="file_type">
+      <comment>文件类型 0.生产任务单2.快递发运单 1.签收单</comment>
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="399" parent="31" name="name">
+      <comment>文件名称不带后缀</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="400" parent="31" name="file_name">
+      <comment>文件全称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="401" parent="31" name="file_server_name">
+      <comment>服务器文件路径</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="402" parent="31" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="403" parent="31" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="404" parent="31" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="405" parent="31" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="406" parent="31" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="407" parent="31" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="408" parent="32" name="id">
+      <comment>主键id</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="409" parent="32" name="order_id">
+      <comment>订单id</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="410" parent="32" name="flow_id">
+      <comment>订单流水号</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="411" parent="32" name="name">
+      <comment>首页文件名称不带后缀</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="412" parent="32" name="file_name">
+      <comment>首页文件全称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="413" parent="32" name="file_server_name">
+      <comment>服务器文件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="414" parent="32" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="415" parent="32" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="416" parent="32" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="417" parent="32" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="418" parent="32" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="419" parent="32" name="PRIMARY">
+      <columns>id
+order_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="420" parent="33" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="421" parent="33" name="order_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="422" parent="33" name="memo">
+      <comment>生产部注意事项内容</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="423" parent="33" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="424" parent="33" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="425" parent="33" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="426" parent="33" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="427" parent="33" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="428" parent="33" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="429" parent="33" name="PRIMARY">
+      <columns>id
+order_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="430" parent="34" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="431" parent="34" name="order_id">
+      <comment>订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="432" parent="34" name="file_name">
+      <comment>附件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="433" parent="34" name="file_server_name">
+      <comment>服务器文件名称</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="434" parent="34" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="435" parent="34" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="436" parent="34" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="437" parent="34" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="438" parent="34" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="439" parent="34" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="440" parent="35" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="441" parent="35" name="order_id">
+      <comment>订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="442" parent="35" name="flow_id">
+      <comment>流水号 (xx-0000)</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="443" parent="35" name="order_parent_id">
+      <comment>父订单id</comment>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="444" parent="35" name="express_name">
+      <comment>快递公司名称</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="445" parent="35" name="express_no">
+      <comment>快递单号</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="446" parent="35" name="delivery_date">
+      <comment>发货日期</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="447" parent="35" name="express_message">
+      <comment>快递信息备注</comment>
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="448" parent="35" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="449" parent="35" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="450" parent="35" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="451" parent="35" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="452" parent="35" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="453" parent="35" name="order_id">
+      <columns>order_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="454" parent="35" name="PRIMARY">
+      <columns>id
+flow_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="455" parent="36" name="id">
+      <comment>主键id</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(36)|0</data-type>
+    </column>
+    <column id="456" parent="36" name="builder_time">
+      <comment>报表统计生成时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="457" parent="36" name="task_status">
+      <comment>任务状态(0.未运行 1.已完成)</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="458" parent="36" name="date_created">
+      <comment>创建时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="459" parent="36" name="date_modified">
+      <comment>修改时间</comment>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="460" parent="36" name="user_created">
+      <comment>创建人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="461" parent="36" name="user_modified">
+      <comment>修改人</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="462" parent="36" name="is_del">
+      <comment>是否删除 0.未删除 1已删除</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="463" parent="36" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

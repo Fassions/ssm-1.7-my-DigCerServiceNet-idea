@@ -1,0 +1,52 @@
+.tdiv_add {
+	margin : auto auto;
+	width : 680px;
+}
+.tdiv_add_i {
+	float : left;
+	margin : 12px 0px 0px 0px;
+	width : 340px;
+	height : 20px;
+	text-align : left;
+}
+.tdiv_add_i span {
+	text-align : right;
+	display: inline-block;
+	width: 80px;
+}
+.tdiv_add_i input[type=text]{
+	width : 220px;
+}
+.tdiv_add_i_d {
+	display : inline-block;
+	width : 220px;
+	text-align : left;
+}
+.tdiv_add_b div{
+	margin: 20px 45% 20px 38%;
+	text-align: center;
+}
+
+.tdiv_add_i_y {
+	width: 660px;
+	margin : 12px auto;
+	padding: 12px;
+	background-color: #fff;
+}
+.tdiv_add_url {
+	float: left;
+	margin: 12px 0px 0px 0px;
+	width: 32%;
+	height: 20px;
+	line-height: 20px;
+}
+label {
+	cursor: pointer;
+}
+
+
+
+
+
+
+

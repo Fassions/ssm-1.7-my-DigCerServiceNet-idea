@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.common.dao.ProductMapper">
+    <select id="getOrderProductBetween" parameterType="java.util.Map" resultType="TblProductionProductSearcher">
+        <![CDATA[
+        SELECT
+        o.flow_id flowId,s.label_start labelStart,s.label_end labelEnd,s.label_num_start,s.label_num_end,s.label_prefix labelPrefix,s.product_list_id productListId
+        FROM order_product s
+        LEFT JOIN `order` o on s.order_id = o.id and s.is_del = o.is_del
+         where (((s.label_num_start <= #{labelNumStart} and s.label_num_end >= #{labelNumStart} ) or (s.label_num_start<=#{labelNumEnd} and s.label_num_end>=#{labelNumEnd})) or (s.label_num_start>=#{labelNumStart} and s.label_num_end<=#{labelNumEnd}))
+          and (( o.order_status>1 and o.order_status <>5 and o.order_status<>6)
+          ]]>
+        <if test="orderId!=null">
+            or (s.order_id=#{orderId})
+        </if>
+          <![CDATA[
+          )
+         and s.label_prefix =#{labelPrefix} and s.product_list_id = #{productListId}
+         and s.is_del = false;
+        ]]>
+    </select>
+
+    <select id="getTblProductionProductByLabelStartLabelEnd" parameterType="java.lang.String" resultType="TblProductionProductSearcher">
+        <![CDATA[
+         select
+          s.id id,s.product_list_id productListId,s.product_name productName,s.label_start labelStart,s.label_end labelEnd,s.flow_id flowId,s.production_date productionDate,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel
+         from tbl_production_product s
+          where
+          (((s.label_num_start <= #{labelNumStart} and s.label_num_end >= #{labelNumStart} ) or (s.label_num_start<=#{labelNumEnd} and s.label_num_end>=#{labelNumEnd})) or (s.label_num_start>=#{labelNumStart} and s.label_num_end<=#{labelNumEnd}))
+           and s.label_prefix =#{labelPrefix} and s.product_list_id = #{productListId}
+           and s.is_del=false;
+        ]]>
+    </select>
+
+
+</mapper>

@@ -1,0 +1,121 @@
+/*left.jsp*/
+body {
+	font-family: "Microsoft YaHei", "STHeiti Light";
+	font-size: 13px;
+	font-weight: normal;
+	background-color: #3e70b6;
+	color : #ffffff;
+	margin: 0 0;
+	/*color: #0061cb;*/
+}
+
+.left_d {
+	margin-top: 30px;
+	background: #efefef;
+}
+
+div {
+	border: 0px solid #0000FF;
+	padding: 0px;
+}
+img {
+	border : 0px;
+}
+p {
+	margin: 0px 0px 0px 0px;
+}
+
+ul {
+	text-indent: 63px;
+	padding: 0px 0px;
+	margin: 0px 0px;
+	/*background-color: #fff;*/
+}
+/*菜单列表*/
+.left_l {
+	background-color: #3e70b6;
+	font-weight: bold;
+	font-size: 14px;
+	text-indent: 40px;
+	/*border-bottom: 1px solid #fff;*/
+}
+/*菜单未展开*/
+.left_todown {
+	float : right;
+	background-image : url(../images/left/todown2.png);
+	/*background-color : #0000FF;*/
+	background-repeat: no-repeat;
+	width : 11px;
+	height : 10px;
+	position: relative;
+	right: 20px;
+	top: 20px;
+}
+/*菜单展开*/
+.left_toup {
+	float : right;
+	background-image : url(../images/left/toup2.png);
+	/*background-color : green;*/
+	background-repeat: no-repeat;
+	width : 11px;
+	height : 10px;
+	position: relative;
+	right: 20px;
+	top: 20px;
+}
+/*菜单图标*/
+.left_tubiao {
+	float : left;
+	background-repeat: no-repeat;
+	width : 22px;
+	height : 20px;
+	position: relative;
+	left: 30px;
+	top: 14px;
+}
+/*二级菜单图标*/
+.li_s_d {
+	float : left;
+	background-image : url(../images/left/secondp2.png);
+	background-repeat: no-repeat;
+	width : 15px;
+	height : 15px;
+	position: relative;
+	left: 55px;
+	top: 17px;
+}
+.left_l p {
+	cursor: pointer;
+	/*padding: 12px 10px;*/
+	padding: 12px 10px 20px 0px;
+}
+
+.p_hover {
+	color: #ffffff;
+}
+
+.unit_select {
+	background-color: #114e94;
+	color: #fff;
+}
+
+.li_s {
+	cursor: pointer; 
+	list-style-type : none;
+	height: 43px;
+	font-size: 15px;
+	line-height: 43px;
+	/*border-top: 1px solid #98d4d8;*/
+	list-style-type: none;
+}
+
+.li_select {
+	cursor: pointer;
+	list-style-type: none;
+	height: 43px;
+	font-size: 15px;
+	line-height: 43px;
+	/*border-top: 1px solid #98d4d8;*/
+	/*background-color: #E6E6E6;*/
+	background-color: #1f5fa9;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.commonUser.dao.GaUserMapper">
+	<insert id="postGaUser" parameterType="GaUser">
+	INSERT INTO user_info (`id`, `user_id`, `user_name`, `certificate_code`,
+	 `user_type`,`order_unit_name`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`)
+	  VALUES (#{id}, #{userId}, #{userName}, #{certificateCode}, #{userType},#{orderUnitName}, #{dateCreated}, #{dateModified}, #{userCreated}, #{userModified}, #{isDel})
+	</insert>
+
+	<select id="getGaUserByParameterMap" parameterType="java.util.Map" resultType="GaUser">
+		select u.id id,u.user_id userId,u.user_name userName,u.certificate_code certificateCode,u.user_type userType,ou.order_unit_name orderUnitName,ru.role_id roleId,r.role_name roleName,r.role_description roleDescription,
+		u.date_created dateCreated,u.date_modified dateModified,u.user_created userCreated,u.user_modified userModified,u.is_del isDel
+		from user_info u
+		LEFT JOIN user_role ru on u.user_id = ru.user_id and u.is_del = ru.is_del
+		LEFT JOIN tbl_role r on r.id = ru.role_id and r.is_del = ru.is_del
+		LEFT JOIN tbl_order_unit ou on u.order_unit_name = ou.id and u.is_del = ou.is_del
+		<where>
+			u.is_del = FALSE
+			<if test="certificateCode != null"> and u.certificate_code = #{certificateCode}</if>
+  		</where>
+	</select>
+
+	<update id="putUserInfo" parameterType="UserInfo">
+		update `user_info` s
+		<trim prefix="set" prefixOverrides=",">
+			<if test="id!=null">,s.`id`=#{id} </if><if test="userId!=null">,s.`user_id`=#{userId} </if><if test="userName!=null">,s.`user_name`=#{userName} </if><if test="certificateCode!=null">,s.`certificate_code`=#{certificateCode} </if><if test="userType!=null">,s.`user_type`=#{userType} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+			<if test="orderUnitName!=null">,s.`order_unit_name`=#{orderUnitName} </if><if test="userMessage!=null">,s.`user_message`=#{userMessage} </if>
+		</trim>
+		where s.`id` = #{id}
+	</update>
+
+	<select id="getUserInfo" parameterType="java.util.Map" resultType="UserInfo">
+		select s.id id,s.user_id userId,s.user_name userName,s.certificate_code certificateCode,s.user_type userType,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel,s.order_unit_name orderUnitName from  `user_info` s
+		<trim prefix="where" prefixOverrides="and|or">
+			<if test="id!=null"> and s.id=#{id} </if><if test="userId!=null"> and s.user_id=#{userId} </if><if test="userName!=null"> and s.user_name=#{userName} </if><if test="certificateCode!=null"> and s.certificate_code=#{certificateCode} </if><if test="userType!=null"> and s.user_type=#{userType} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if><if test="orderUnitName!=null"> and s.order_unit_name=#{orderUnitName} </if>
+		</trim>
+		and s.is_del = false;
+
+	</select>
+	
+
+
+</mapper>

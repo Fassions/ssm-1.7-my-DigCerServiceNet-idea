@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.common.dao.CommonMapper">
+    <select id="getTblAreaInfo" parameterType="java.util.Map" resultType="TblAreaInfo">
+        SELECT s.id as id,s.parent_id as parentId,s.level_type levelType,s.name name,s.sale_manager saleManager
+         FROM tbl_area_info s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="levelType!=null">
+                and s.level_type = #{levelType}
+            </if>
+            <if test="id!=null">
+                and s.id = #{id}
+            </if>
+            ORDER BY s.sort_level
+        </trim>
+    </select>
+
+    <select id="getTblAreaInfoByParentId" parameterType="java.lang.String" resultType="TblAreaInfo">
+        SELECT s.id as id,s.parent_id as parentId,s.level_type levelType,s.name name,s.sale_manager saleManager
+         FROM tbl_area_info s
+        <trim prefix="where" prefixOverrides="and|or">
+            s.parent_id = #{parentId}
+        </trim>
+    </select>
+
+    <select id="getTblProductList" resultType="TblProductList">
+        select s.product_name productName,s.supplier supplier,s.product_type productType,s.label_suffix labelSuffix,s.on_sale onSale,
+        s.id id,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel
+        from tbl_product_list s
+        where s.on_sale = 1 and s.is_del = FALSE;
+    </select>
+    
+    <select id="getTblProductPreffixByAreaId" parameterType="java.lang.String" resultType="TblAreaLabelPrefix">
+        select s.area_id areaId,s.prefix_name prefixName,s.other_prefix otherPrefix,s.id id,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from tbl_area_label_prefix s
+        <trim prefix="where" prefixOverrides="and|or">
+            s.area_id = #{areaId} and s.is_del = FALSE;
+        </trim>
+    </select>
+
+    <select id="getTblTblAreaLabelSuffix" parameterType="java.util.Map" resultType="TblAreaLabelSuffix">
+        select s.id id,s.product_list_id productListId,s.label_prefix_id labelPrefixId,s.supplier supplier,s.product_type productType,s.label_suffix labelSuffix,s.on_sale onSale,s.product_price productPrice,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `tbl_area_label_suffix` s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="productListId!=null">
+                and s.product_list_id = #{productListId}
+            </if>
+            <if test="labelPreffixId!=null">
+                and s.label_prefix_id = #{labelPreffixId}
+            </if>
+                and s.is_del = false;
+        </trim>
+    </select>
+</mapper>

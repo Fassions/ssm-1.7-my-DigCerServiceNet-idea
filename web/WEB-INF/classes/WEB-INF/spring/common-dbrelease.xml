@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://www.springframework.org/schema/beans"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:cache="http://www.springframework.org/schema/cache"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+		xmlns:jee="http://www.springframework.org/schema/jee"
+		xmlns:jms="http://www.springframework.org/schema/jms"
+		xmlns:lang="http://www.springframework.org/schema/lang"
+		xmlns:mvc="http://www.springframework.org/schema/mvc"
+		xmlns:oxm="http://www.springframework.org/schema/oxm"
+		xmlns:task="http://www.springframework.org/schema/task"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:util="http://www.springframework.org/schema/util"
+		xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.2.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<!-- JNDI数据源配置 -->
+	<!--<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/DigCerServiceNet"/>-->
+	<!--<bean id = "dateBaseProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+	<!--<property name="order" value="1"/>-->
+	<!--<property name="ignoreUnresolvablePlaceholders" value="true"/>-->
+	<!--<property name="locations">-->
+	<!--<list>-->
+	<!--<value>classpath:profile/profile.properties</value>-->
+	<!--</list>-->
+	<!--</property>-->
+	<!--</bean>-->
+	<!--<context:property-placeholder location="classpath:profile/profile.properties"/>-->
+
+	<beans profile="release">
+		<context:property-placeholder location="classpath:profile/release/application.properties"/>
+		<!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
+		<!--<property name="driverClassName" value="${database.driver.class}"/>-->
+		<!--<property name="url"  value="${database.url}"/>-->
+		<!--<property name="username" value="${database.username}"/>-->
+		<!--<property name="password" value="${database.password}"/>-->
+		<!--&lt;!&ndash;初始连接大小&ndash;&gt;-->
+		<!--<property name="initialSize" value="${database.initialSize}"/>-->
+		<!--&lt;!&ndash;连接池最大数量&ndash;&gt;-->
+		<!--<property name="maxActive" value="${database.maxActive}"/>-->
+		<!--&lt;!&ndash;连接池最大空闲&ndash;&gt;-->
+		<!--<property name="maxIdle" value="${database.maxldle}"/>-->
+		<!--&lt;!&ndash;连接池最小空闲&ndash;&gt;-->
+		<!--<property name="minIdle" value="${database.minldle}"/>-->
+		<!--&lt;!&ndash;获取连接最大等待时间&ndash;&gt;-->
+		<!--<property name="maxWait" value="${database.maxWait}"/>-->
+		<!--</bean>-->
+		<!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">-->
+		<!--&lt;!&ndash; jdbc setting &ndash;&gt;-->
+		<!--<property name="driverClass" value="${database.driver.class}"/>-->
+		<!--<property name="jdbcUrl" value="${database.url}"/>-->
+		<!--<property name="user" value="${database.username}"/>-->
+		<!--<property name="password" value="${database.password}"/>-->
+		<!--&lt;!&ndash; pool setting &ndash;&gt;-->
+		<!--&lt;!&ndash;初始化获取的连接 Default:3&ndash;&gt;-->
+		<!--<property name="initialPoolSize" value="${database.pool.init.size}"/>-->
+		<!--&lt;!&ndash;连接池保留的最小连接&ndash;&gt;-->
+		<!--<property name="minPoolSize" value="${database.pool.min.size}"/>-->
+		<!--&lt;!&ndash;连接池保留的最大连接 Default:15&ndash;&gt;-->
+		<!--<property name="maxPoolSize" value="${database.pool.max.size}"/>-->
+		<!--&lt;!&ndash;最大空闲时间，60秒未使用则连接被丢弃。为0永不丢弃。 Default:0&ndash;&gt;-->
+		<!--<property name="maxIdleTime" value="60"/>-->
+
+		<!--<property name="idleConnectionTestPeriod" value="120"/>-->
+		<!--&lt;!&ndash;连接池连接耗尽，一次同时获取连接数 Default:3&ndash;&gt;-->
+		<!--<property name="acquireIncrement" value="2"/>-->
+		<!--&lt;!&ndash;从数据库获取新连接失败后尝试的次数。&ndash;&gt;-->
+		<!--<property name="acquireRetryAttempts" value="3"/>-->
+		<!--&lt;!&ndash;尝试获取连接失败后该数据源将申明已断开并永久关闭&ndash;&gt;-->
+		<!--<property name="breakAfterAcquireFailure" value="true"/>-->
+		<!--&lt;!&ndash;取得连接同时无需验证连接有效性&ndash;&gt;-->
+		<!--<property name="testConnectionOnCheckin" value="${database.pool.testConnectionOnCheckin}"/>-->
+		<!--&lt;!&ndash;提交验证连接有效性。&ndash;&gt;-->
+		<!--<property name="testConnectionOnCheckout" value="${database.pool.testConnectionOnCheckout}"/>-->
+
+		<!--<property name="maxStatements" value="10"/>-->
+		<!--</bean>-->
+		<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+			<!--数据库基本信息配置-->
+			<property name="url" value="${database.url}"/>
+			<property name="username" value="${database.username}"/>
+			<property name="password" value="${database.password}"/>
+			<property name="driverClassName" value="${database.driverClassName}"/>
+			<!--开启sql监控-->
+			<property name="filters" value="${database.filters}"/>
+			<!--最大并发连接数-->
+			<property name="maxActive" value="${database.maxActive}"/>
+			<!--初始化连接数量-->
+			<property name="initialSize" value="${database.initialSize}"/>
+			<!--配置获取连接等待超时的时间-->
+			<property name="maxWait" value="${database.maxWait}"/>
+			<!--最小空闲连接数-->
+			<property name="minIdle" value="${database.minIdle}"/>
+			<!--配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒-->
+			<property name="timeBetweenEvictionRunsMillis" value="${database.timeBetweenEvictionRunsMillis}"/>
+			<!--配置一个连接在池中最小生存的时间，单位是毫秒-->
+			<property name="minEvictableIdleTimeMillis" value="${database.minEvictableIdleTimeMillis}"/>
+			<property name="validationQuery" value="${database.validationQuery}"/>
+			<property name="testWhileIdle" value="${database.testWhileIdle}"/>
+			<property name="testOnBorrow" value="${database.testOnBorrow}"/>
+			<property name="testOnReturn" value="${database.testOnReturn}"/>
+			<property name="maxOpenPreparedStatements" value="${database.maxOpenPreparedStatements}"/>
+			<!--打开removeAbandoned功能-->
+			<property name="removeAbandoned" value="${database.removeAbandoned}"/>
+			<!--1800秒，也就是30分钟-->
+			<property name="removeAbandonedTimeout" value="${database.removeAbandonedTimeout}"/>
+			<!--关闭abanded连接时输出错误日志-->
+			<property name="logAbandoned" value="${database.logAbandoned}"/>
+		</bean>
+		<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+			<property name="dataSource" ref="dataSource" />
+		</bean>
+		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<property name="dataSource" ref="dataSource" />
+			<property name="configLocation" value="/WEB-INF/mybatis/configuration.xml"></property>
+		</bean>
+
+
+
+
+
+
+		<!--UKey 连接数据源-->
+		<bean id="dataSourceUKey" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+			<property name="driverClassName" value="${datebase.ukey.driver.class}"/>
+			<property name="url"  value="${datebase.ukey.url}"/>
+			<property name="username" value="${datebase.ukey.username}"/>
+			<property name="password" value="${datebase.ukey.password}"/>
+
+			<!--初始连接大小-->
+			<property name="initialSize" value="${datebase.ukey.initialSize}"/>
+			<!--连接池最大数量-->
+			<property name="maxActive" value="${datebase.ukey.maxActive}"/>
+			<!--连接池最大空闲-->
+			<property name="maxIdle" value="${datebase.ukey.maxldle}"/>
+			<!--连接池最小空闲-->
+			<property name="minIdle" value="${datebase.ukey.minldle}"/>
+			<!--获取连接最大等待时间-->
+			<property name="maxWait" value="${datebase.ukey.maxWait}"/>
+
+			<property name="testWhileIdle" value="${datebase.ukey.testWhileIdle}"/>
+			<property name="testOnBorrow" value="${datebase.ukey.testOnBorrow}"/>
+			<property name="testOnReturn" value="${datebase.ukey.testOnReturn}"/>
+			<property name="validationQuery" value="${datebase.ukey.validationQuery}"/>
+			<property name="timeBetweenEvictionRunsMillis" value="${datebase.ukey.timeBetweenEvictionRunsMillis}"/>
+			<property name="removeAbandonedTimeout" value="${datebase.ukey.removeAbandonedTimeout}"/>
+			<property name="removeAbandoned" value="${datebase.ukey.removeAbandoned}"/>
+			<property name="logAbandoned" value="${datebase.ukey.logAbandoned}"/>
+			<property name="minEvictableIdleTimeMillis" value="${datebase.ukey.minEvictableIdleTimeMillis}"/>
+		</bean>
+		<bean id="transactionManagerUKey" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+			<property name="dataSource" ref="dataSourceUKey" />
+		</bean>
+
+		<bean id="sqlSessionFactoryUKey" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<property name="dataSource" ref="dataSourceUKey" />
+			<property name="configLocation" value="/WEB-INF/mybatis/configurationUKey.xml"></property>
+		</bean>
+	</beans>
+
+
+
+
+
+
+
+
+
+</beans>

@@ -1,0 +1,109 @@
+html {
+	height : 100%;
+	width : 100%;
+	margin : 0px;
+	padding : 0px;
+	
+}
+body {
+	font-family : "Microsoft YaHei","STHeiti Light";
+	background: #e2e2e2;
+	width : 100%;
+	height : 100%;
+	margin : 0px;
+}
+.back_img {
+	position: absolute;
+	z-index: -1;
+	width : 100%;
+	height : 100%;
+}
+.div1 {
+	text-align : center;
+	font-weight: bold;
+	height : 100%;
+}
+.content_d {
+	padding-top: 28px;
+}
+.b_img {
+	width : 100%;
+	height : 100%;
+}
+p {
+	margin : 0px 0px;	
+}
+
+.login_l {
+	margin : 0px auto 0px auto;
+}
+.logo {
+	margin : 0px auto;
+	width : 148px;
+}
+
+.login_title {
+	margin : 23px auto 0px auto;
+	color : #FFF;
+	font-size : 25px;
+}
+
+.login_d {
+	margin : 20px auto;
+	width : 396px;
+	height : 396px;
+	background-color : #FFF;
+}
+.login_d_tl {
+	float : left;
+	width : 192px;
+	margin : 10px 0px;
+	color : #008df0;
+}
+.login_d_tf {
+	float : right;
+	width : 192px;
+	margin : 10px 0px;
+	color : #626262;
+}
+.login_d p {
+	font-size : 18px;
+	line-height : 41px;
+	height : 41px;
+	border-bottom : 3px solid #008df0;
+}
+.login_d_i1 {
+	margin : 55px auto;
+} 
+.login_d_i2 {
+	background-image: url(../images/login/button.png);
+	width: 309px;
+	height: 45px;
+	margin : 40px auto;
+	cursor : pointer;
+} 
+
+.bottom {
+	font-size: 15px;
+    color: #00a2ee;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+
+
+.clearfloat {
+	clear : both;
+	padding : 0px;
+	width : 0px;
+	height : 0px;
+	visibility : none;
+}
+
+
+
+
+
+

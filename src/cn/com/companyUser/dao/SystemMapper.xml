@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.companyUser.dao.SystemMapper">
+
+    <select id="listTblOrderUnitWithPage" parameterType="TblOrderUnitSearcher" resultType="TblOrderUnitSearcher">
+        select
+            u.user_id userId,u.user_name userName,u.certificate_code certificateCode,u.user_type userType,
+            u.order_unit_name orderUnitCode,u.user_message userMessage,
+            u.date_created userDateCreated,u.date_modified userDateModified,u.user_created userCreated,u.user_modified userModified,
+            t.order_unit_name orderUnitName,t.remark remark,
+            t.date_created unitDateCreated,t.date_modified unitDateModified,t.user_created unitUserCreated,t.user_modified unitUserModified,
+            (select a.user_name from user_info a where a.user_id=t.user_created) unitUserCreatedName
+             from user_info u
+             LEFT JOIN tbl_order_unit t on u.order_unit_name = t.id and u.is_del = t.is_del
+         <trim prefix="where" prefixOverrides="and|or">
+             <if test="orderUnitName!=null and orderUnitName!=''">
+                and t.`order_unit_name` like "%"#{orderUnitName}"%"
+             </if>
+             <if test="userName!=null and userName!=''">
+                and u.`user_name` like "%"#{userName}"%"
+             </if>
+             <if test="certificateCode!=null and certificateCode!=''">
+                and  u.`certificate_code` like "%"#{certificateCode}"%"
+             </if>
+              and u.is_del = false;
+         </trim>
+    </select>
+
+    <select id="listproductionProductWithPage" parameterType="TblProductionProductSearcher" resultType="TblProductionProductSearcher">
+        select s.id id,u.user_name userName,s.product_list_id productListId,s.product_name productName,s.label_start labelStart,s.label_end labelEnd,s.production_date productionDate,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from tbl_production_product s
+         LEFT JOIN user_info u on s.user_created = u.user_id and s.is_del = u.is_del
+        <trim prefix="where" prefixOverrides="and|or">
+            <![CDATA[ and (s.label_start<=#{labelStart} and s.label_end>=#{labelStart}) or (s.label_start<=#{labelEnd} and s.label_end>=#{labelEnd})]]>
+            <if test="productListId!=null and productListId!=''">
+               and s.product_list_id  like "%"#{productListId}"%"
+            </if>
+            <!--<if test="labelProduct!=null and labelProduct!=''">-->
+                <!--and s.label_product like "%"#{labelProduct}"%"-->
+            <!--</if>-->
+            <if test="userName!=null and userName!=''">
+                and u.user_name like "%"#{userName}"%"
+            </if>
+            <if test="addDateStart!=null and addDateStart!=''">
+                <![CDATA[  and s.date_created >= #{addDateStart} ]]>
+            </if>
+            <if test="addDateEnd!=null and addDateEnd!=''">
+                <![CDATA[ and s.date_created <= #{addDateEnd} ]]>
+            </if>
+            and s.is_del = FALSE ORDER BY s.production_date desc;
+        </trim>
+
+    </select>
+
+    <select id="getTblOrderUnit" parameterType="java.util.Map" resultType="TblOrderUnit">
+        select s.id id,s.order_unit_name orderUnitName,s.remark remark,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `tbl_order_unit` s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="id!=null"> and s.id=#{id} </if><if test="orderUnitName!=null"> and s.order_unit_name=#{orderUnitName} </if><if test="remark!=null"> and s.remark=#{remark} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+            and s.is_del = FALSE;
+        </trim>
+    </select>
+
+    <select id="getTblHome" parameterType="java.util.Map" resultType="TblHome">
+        select s.id id,s.file_label fileLabel,s.file_name fileName,s.name name,s.file_level fileLevel,s.file_server_name,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from tbl_home s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="id!=null"> and s.id=#{id} </if><if test="fileLabel!=null"> and s.file_label=#{fileLabel} </if><if test="name!=null"> and s.name=#{name} </if><if test="fileName!=null"> and s.file_name=#{fileName} </if><if test="fileServerName!=null"> and s.file_server_name=#{fileServerName} </if><if test="fileLevel!=null"> and s.file_level=#{fileLevel} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+            and s.is_del = FALSE  ORDER BY CAST(s.file_level AS DECIMAL);
+        </trim>
+    </select>
+
+    <insert id="postTblOrderUnit" parameterType="TblOrderUnit">
+        INSERT INTO `tbl_order_unit` (`id`, `order_unit_name`, `remark`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderUnitName},#{remark},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postTblHome" parameterType="TblHome">
+        INSERT INTO `tbl_home` (`id`, `file_label`,`name`, `file_name`,`file_level`,`file_server_name`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{fileLabel},#{name},#{fileName},#{fileLevel},#{fileServerName},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postTblProductionProduct" parameterType="TblProductionProduct">
+        INSERT INTO `tbl_production_product` (`id`, `product_list_id`, `flow_id`, `product_name`, `label_prefix`, `label_suffix`, `supplier`, `label_start`, `label_end`, `label_num_start`, `label_num_end`, `production_date`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{productListId},#{flowId},#{productName},#{labelPrefix},#{labelSuffix},#{supplier},#{labelStart},#{labelEnd},#{labelNumStart},#{labelNumEnd},#{productionDate},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <update id="resetTblHomeFileLevel">
+        update tbl_home t set t.file_level = (select @n := @n + 1 from (select @n := 0) r) ORDER BY t.file_level;
+    </update>
+
+    <update id="updateTblHome" parameterType="TblHome">
+        update `tbl_home` s
+        <trim prefix="set" prefixOverrides=",">
+             <if test="id!=null">,s.`id`=#{id} </if><if test="fileLabel!=null">,s.`file_label`=#{fileLabel} </if><if test="name!=null">,s.`name`=#{name} </if><if test="fileName!=null">,s.`file_name`=#{fileName} </if><if test="fileLevel!=null">,s.`file_level`=#{fileLevel} </if><if test="fileServerName!=null">,s.`file_server_name`=#{fileServerName} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <delete id="deleteTblHome" parameterType="java.lang.String">
+        DELETE from tbl_home where id = #{tblHomeId};
+    </delete>
+</mapper>

@@ -1,0 +1,88 @@
+/*top.jsp*/
+html {
+	height : 100%
+}
+
+body {
+	height : 100%;
+	margin : 0px 0px;
+    margin-top: -10px;
+	font-size : 12px;
+	font-weight: bold;
+	font-family : "Microsoft YaHei","STHeiti Light";
+	/*background-color : #00A2FF;*/
+	/*background-color: #1362A3;*/
+	/*background-color: #0A3558;*/
+	background: -webkit-linear-gradient(to right,#003c7c,#5a9ffe);
+	background: -moz-linear-gradient(to right,#003c7c,#5a9ffe);
+	background: -webkit-gradient(linear,left top,right top,from(#003c7c),to(#5a9ffe));
+	background: linear-gradient(to right,#003c7c,#5a9ffe);
+	background: -ms-linear-gradient(to right,#003c7c,#5a9ffe);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#003c7c,endColorstr=#5a9ffe);
+}
+p {
+	margin : 0px 0px;
+}
+div {
+	/*float : left;*/
+	margin : 0 0;
+
+}
+.div_1 {
+	position: absolute;
+	left: 25px;
+	top: 8px;
+    color : #FFF;
+}
+.div_2 {
+	position: absolute;
+	left: 100px;
+	top: 8px;
+	height : 48px;
+	line-height : 48px;
+	font-size : 19px;
+    color : #FFF;
+    /*margin-top: -8px;*/
+}
+.div_3 {
+	position: absolute;
+	right : 300px;
+	top: 8px;
+	height : 48px;
+	line-height : 48px;
+	font-size : 16px;
+    color : #FFF;
+}
+.div_4 {
+	position: absolute;
+	right : 50px;
+	top: 8px;
+	height : 48px;
+	line-height : 48px;
+	font-size : 16px;
+    color : #FFF;
+}
+.div_4 img {
+	margin : 10px 10px;
+	cursor : pointer;
+    color : #FFF;
+}
+.div_l {
+	position: absolute;
+	right : 250px;
+	top: 8px;
+	width : 1px;
+	height : 48px;
+	background-color : #1d7a97;
+    color : #FFF;
+}
+
+
+
+
+
+
+
+
+
+

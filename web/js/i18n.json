@@ -1,0 +1,18 @@
+{
+	"sEmptyTable": "",
+	"sInfo":"显示 _START_ 到 _END_ 共_TOTAL_条记录",
+	"sInfoEmpty": "没有数据",
+	"sInfoFiltered": "",
+	"sInfoPostFix": "",
+	"sLengthMenu": "显示 _MENU_ 条记录",
+	"sLoadingRecords": "载入中...",
+	"sProcessing": "",
+	"sSearch": "搜索",
+	"sZeroRecords": "",
+	"oPaginate": {
+		"sFirst":    "首页",
+		"sPrevious": "前一页",
+		"sNext":     "后一页",
+		"sLast":     "末页"
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/web/pages/CommonUser/order/OrderSubmit.jsp" value="file://$PROJECT_DIR$/web/pages/CommonUser/order" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CommonUser/order/detailsInvoice.jsp" value="file://$PROJECT_DIR$/web/pages/CommonUser/order" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CommonUser/orderquery/detailsOrder.jsp" value="file://$PROJECT_DIR$/web/pages/CommonUser/orderquery" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CommonUser/orderquery/orderList.jsp" value="file://$PROJECT_DIR$/web/pages/CommonUser/orderquery" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CompanyUser/exceltemplate/templateIndex.jsp" value="file://$PROJECT_DIR$/web/pages/CompanyUser/exceltemplate" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CompanyUser/importexport/importExportIndex.jsp" value="file://$PROJECT_DIR$/web/pages/CompanyUser/importexport" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CompanyUser/orderquery/orderIndex.jsp" value="file://$PROJECT_DIR$/web/pages/CompanyUser/orderquery" />
+        <entry key="file://$PROJECT_DIR$/web/pages/CompanyUser/system/userManage.jsp" value="file://$PROJECT_DIR$/web/pages/CompanyUser/system" />
+      </map>
+    </option>
+  </component>
+</project>

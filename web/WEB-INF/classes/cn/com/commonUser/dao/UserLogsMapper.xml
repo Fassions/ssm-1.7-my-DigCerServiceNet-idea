@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.commonUser.dao.UserLogsMapper">
+    <insert id="postUserLogs" parameterType="UserLogs">
+        INSERT INTO user_logs (`id`, `user_id`, `ip`, `broswer_info`, `login_date`, `logout_date`, `login_type`, `logout_type`,`cerSerno`)
+        VALUES (#{id}, #{userId}, #{ip}, #{broswerInfo},  #{loginDate}, #{logoutDate}, #{loginType}, #{logoutType},#{cerSerno})
+    </insert>
+    <select id="getUserLastLoginDate" parameterType="String" resultType="UserLogs">
+        SELECT "ID" as id, "LOGIN_ID" as loginId, "IP" as ip, "IE_INFO" as ieInfo, "LOGIN_DATE" as loginDate, "LOGIN_TYPE" as loginType,
+        "LOGIN_FROM" as loginFrom
+        FROM "user_logs"
+        where "LOGIN_ID" = #{loginId}
+        order by "LOGIN_DATE" desc limit 1 offset 0
+    </select>
+    <select id="getGaUserLoginLogCount" resultType="java.lang.Long">
+        SELECT count("ID")
+        FROM "user_logs" where "LOGIN_TYPE" = 1
+    </select>
+</mapper>

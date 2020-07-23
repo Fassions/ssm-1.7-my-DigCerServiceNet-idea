@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--<settings>-->
+		<!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+	<!--</settings>-->
+	<typeAliases>
+
+		<typeAlias type="cn.com.common.model.DeliveryAddress" alias="DeliveryAddress"/>
+		<typeAlias type="cn.com.common.model.Order" alias="Order"/>
+		<typeAlias type="cn.com.common.model.OrderExpress" alias="OrderExpress"/>
+		<typeAlias type="cn.com.common.model.OrderHistoryStatus" alias="OrderHistoryStatus"/>
+		<typeAlias type="cn.com.common.model.OrderInvoice" alias="OrderInvoice"/>
+		<typeAlias type="cn.com.common.model.OrderMemo" alias="OrderMemo"/>
+		<typeAlias type="cn.com.common.model.OrderMessage" alias="OrderMessage"/>
+		<typeAlias type="cn.com.common.model.OrderPaid" alias="OrderPaid"/>
+		<typeAlias type="cn.com.common.model.OrderProduct" alias="OrderProduct"/>
+		<typeAlias type="cn.com.common.model.TblAreaInfo" alias="TblAreaInfo"/>
+		<typeAlias type="cn.com.common.model.TblAreaLabelPrefix" alias="TblAreaLabelPrefix"/>
+		<typeAlias type="cn.com.common.model.TblProductList" alias="TblProductList"/>
+		<typeAlias type="cn.com.common.model.TblRole" alias="TblRole"/>
+		<typeAlias type="cn.com.common.model.UserInfo" alias="UserInfo"/>
+		<typeAlias type="cn.com.common.model.UserLogs" alias="UserLogs"/>
+		<typeAlias type="cn.com.common.model.UserRole" alias="UserRole"/>
+		<typeAlias type="cn.com.common.model.OrderInvoiceProduct" alias="OrderInvoiceProduct"/>
+		<typeAlias type="cn.com.common.model.TblOrderUnit" alias="TblOrderUnit"/>
+		<typeAlias type="cn.com.common.model.TblTemplateExcel" alias="TblTemplateExcel"/>
+		<typeAlias type="cn.com.common.model.TblProductionProduct" alias="TblProductionProduct"/>
+		<typeAlias type="cn.com.common.model.OrderUploadFiles" alias="OrderUploadFiles"/>
+		<typeAlias type="cn.com.common.model.TblAreaLabelSuffix" alias="TblAreaLabelSuffix"/>
+		<typeAlias type="cn.com.common.model.TblHome" alias="TblHome"/>
+		<typeAlias type="cn.com.common.model.OrderProductionMemo" alias="OrderProductionMemo"/>
+		<typeAlias type="cn.com.common.model.TblOrderReport" alias="TblOrderReport"/>
+		<typeAlias type="cn.com.common.model.OrderElectronicInvoice" alias="OrderElectronicInvoice"/>
+		<typeAlias type="cn.com.common.model.ReceiptUploadFiles" alias="ReceiptUploadFiles"/>
+		<typeAlias type="cn.com.common.model.OrderInvoiceExpress" alias="OrderInvoiceExpress"/>
+		<typeAlias type="cn.com.common.model.TblReportTask" alias="TblReportTask"/>
+
+		<!--dto-->
+		<typeAlias type="cn.com.common.model.dto.GaUser" alias="GaUser"/>
+		<typeAlias type="cn.com.common.model.dto.OrderVo" alias="orderVo"/>
+		<typeAlias type="cn.com.common.model.dto.OrderInvoiceSave" alias="orderInvoiceSave"/>
+		<typeAlias type="cn.com.common.model.dto.OrderInvoiceVo" alias="orderInvoiceVo"/>
+		<typeAlias type="cn.com.common.model.dto.TemPlateExcelVo" alias="TemPlateExcelVo"/>
+		<typeAlias type="cn.com.common.model.dto.OrderProductExpressVo" alias="OrderProductExpressVo"/>
+
+		<!--search-->
+		<typeAlias type="cn.com.common.model.search.OrderQuerySearcher" alias="OrderQuerySearcher"/>
+		<typeAlias type="cn.com.common.model.search.OrderMessageSearcher" alias="OrderMessageSearcher"/>
+		<typeAlias type="cn.com.common.model.search.OrderHistoryStatusSearcher" alias="OrderHistoryStatusSearcher"/>
+		<typeAlias type="cn.com.common.model.search.OrderMemoSearcher" alias="OrderMemoSearcher"/>
+		<typeAlias type="cn.com.common.model.search.TblTemplateExcelSearcher" alias="TblTemplateExcelSearcher"/>
+		<typeAlias type="cn.com.common.model.search.TblOrderUnitSearcher" alias="TblOrderUnitSearcher"/>
+		<typeAlias type="cn.com.common.model.search.TblProductionProductSearcher" alias="TblProductionProductSearcher"/>
+
+	</typeAliases>
+</configuration>

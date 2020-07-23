@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.companyUser.dao.ImportExportMapper">
+    <select id="exportExpressExcel" resultType="TemPlateExcelVo">
+        select * from (
+        SELECT
+        '发票' as 'expressType',
+        o.id,
+        o.order_status,
+        o.id 'orderId',
+        o.flow_id 'flowId',o.receive_name 'receiveName',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.receive_unit_address 'receiveUnitAddress',o.receive_unit_name 'receiveUnitName',
+        o.receive_phone 'receivePhone',o.receive_mobile 'receiveMobile'
+        from `order` o
+        where
+        <![CDATA[ o.is_del = FALSE and o.need_before_invoice = 1 and o.order_status > 1 and o.order_status <> 6 ]]>
+        and o.id not in (select r.order_id from order_express r
+        where r.order_id = o.id and r.express_type = 1 and r.express_type is NOT NULL GROUP BY r.id)
+        UNION ALL
+        SELECT
+        '证书' as 'expressType',
+        o.id,
+        o.order_status,
+        o.id 'orderId',
+        o.flow_id 'flowId',o.receive_name 'receiveName',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.receive_unit_address 'receiveUnitAddress',o.receive_unit_name 'receiveUnitName',
+        o.receive_phone 'receivePhone',o.receive_mobile 'receiveMobile'
+        from `order` o
+        where
+        <![CDATA[ o.is_del = FALSE and o.need_before_invoice = 1 and o.order_status = 2.2 and o.order_status <> 6 ]]>
+        and o.id not in (select r.order_id from order_express r
+        where r.order_id = o.id and r.express_type = 2 and r.express_type is NOT NULL GROUP BY r.id)
+        UNION ALL
+        SELECT
+        '证书和发票' as 'expressType',
+        o.id,
+        o.order_status,
+        o.id 'orderId',
+        o.flow_id 'flowId',o.receive_name 'receiveName',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.receive_unit_address 'receiveUnitAddress',o.receive_unit_name 'receiveUnitName',
+        o.receive_phone 'receivePhone',o.receive_mobile 'receiveMobile'
+        from `order` o
+        where
+        <![CDATA[ o.is_del = FALSE and o.need_before_invoice = 0 and o.order_status > 1 and o.order_status <> 6 ]]>
+        and o.id not in (select r.order_id from order_express r
+        where r.order_id = o.id and r.express_type = 3 and r.express_type is NOT NULL GROUP BY r.id)
+        ) tt
+        where tt.order_status != '5' and tt.order_status != '6'
+        ORDER BY tt.id
+    </select>
+
+    <select id="exportProductionExcel" resultType="TemPlateExcelVo">
+        select
+         o.id 'orderId',
+         o.flow_id 'flowId',p.product_list_id 'productListId',p.product_name 'productName',p.product_type 'productType',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.order_unit_name 'orderUnitName',p.label_prefix 'prefixName',p.supplier 'supplier',
+        p.label_start 'labelStart',p.label_end 'labelEnd',p.label_suffix 'labelSuffix',
+        DATE_FORMAT( (SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+        o.receive_name 'receiveName',
+        o.receive_phone 'receivePhone',
+        o.receive_mobile 'receiveMobile',
+        o.receive_unit_address 'receiveUnitAddress',
+        (select COUNT(*) from order_invoice a where a.order_id = o.id and a.is_del = o.is_del ) 'invoiceNum',
+        o.product_total_count 'productTotalCount'
+         from order_product p
+         LEFT JOIN `order` o on o.id = p.order_id and o.is_del = p.is_del
+         LEFT JOIN tbl_area_info area on o.province_code = area.id
+         where o.order_status > 1
+         and p.is_del=FALSE
+         and o.id not in (select r.order_id from order_express r where r.order_id = o.id and (r.express_type = 2 or r.express_type = 3) and r.delivery_date is not NULL)
+         and o.order_status != '5' and o.order_status !='6';
+
+    </select>
+
+    <select id="exportInvoiceExcel" resultType="TemPlateExcelVo">
+      select * from (
+            SELECT
+             o.id,
+             o.order_status,
+             o.id 'orderId',
+             i.id 'invoiceId',
+             i.invoice_unit_name 'invoiceUnitName',
+            '先开票' as 'billingDate',
+            (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+            (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+             o.order_unit_name 'orderUnitName',o.flow_id 'flowId',p.product_number 'productTotalCount',
+             p.product_price 'productPrice',p.product_amount 'invoiceTotalAmount',
+            DATE_FORMAT((SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+             p.product_name 'productName',p.product_type 'productType',
+             CASE o.invoice_type WHEN '0' THEN '专票' WHEN '1' THEN '普票' END 'invoiceType',
+            (select a.`name` from tbl_area_info a where a.id = area.parent_id) 'regionName',
+            (select a.sale_manager from tbl_area_info a where a.id = o.province_code) 'saleManager'
+            from order_invoice_product p
+             LEFT JOIN `order` o on p.order_id = o.id and p.is_del = o.is_del
+             LEFT JOIN order_invoice i on p.order_invoice_id = i.id and p.is_del = i.is_del
+             LEFT JOIN tbl_area_info area on o.province_code = area.id
+             where
+             p.is_del = FALSE and o.need_before_invoice = 1 and o.billing_date is NULL
+            UNION ALL
+            SELECT
+             o.id,
+             o.order_status,
+             o.id 'orderId',
+             i.id 'invoiceId',
+             i.invoice_unit_name 'invoiceUnitName',
+             o.billing_date 'billingDate',
+            (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+            (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+             o.order_unit_name 'orderUnitName',o.flow_id 'flowId',p.product_number 'productTotalCount',
+             p.product_price 'productPrice',p.product_amount 'invoiceTotalAmount',
+             DATE_FORMAT((SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+             p.product_name 'productName',p.product_type 'productType',
+             CASE o.invoice_type WHEN '0' THEN '专票' WHEN '1' THEN '普票' END 'invoiceType',
+            (select a.`name` from tbl_area_info a where a.id = area.parent_id) 'regionName',
+            (select a.sale_manager from tbl_area_info a where a.id = o.province_code) 'saleManager'
+            from order_invoice_product p
+             LEFT JOIN `order` o on p.order_id = o.id and p.is_del = o.is_del
+             LEFT JOIN order_invoice i on p.order_invoice_id = i.id and p.is_del = i.is_del
+             LEFT JOIN tbl_area_info area on o.province_code = area.id
+             where
+             p.is_del = FALSE and o.need_before_invoice = 0 and o.billing_date is NULL and o.id in (select r.order_id from order_paid r where r.order_id = o.id and r.arrival_date is not null GROUP BY r.order_id)
+            UNION ALL
+            SELECT
+             o.id,
+             o.order_status,
+             o.id 'orderId',
+             i.id 'invoiceId',
+             i.invoice_unit_name 'invoiceUnitName',
+             o.billing_date 'billingDate',
+            (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+            (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+             o.order_unit_name 'orderUnitName',o.flow_id 'flowId',p.product_number 'productTotalCount',
+             p.product_price 'productPrice',p.product_amount 'invoiceTotalAmount',
+             DATE_FORMAT((SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+             p.product_name 'productName',p.product_type 'productType',
+             CASE o.invoice_type WHEN '0' THEN '专票' WHEN '1' THEN '普票' END 'invoiceType',
+            (select a.`name` from tbl_area_info a where a.id = area.parent_id) 'regionName',
+            (select a.sale_manager from tbl_area_info a where a.id = o.province_code) 'saleManager'
+            from order_invoice_product p
+             LEFT JOIN `order` o on p.order_id = o.id and p.is_del = o.is_del
+             LEFT JOIN order_invoice i on p.order_invoice_id = i.id and p.is_del = i.is_del
+             LEFT JOIN tbl_area_info area on o.province_code = area.id
+             where
+             p.is_del = FALSE and o.need_before_invoice = 0 and o.billing_date is NULL and o.order_type = 3
+        ) tt
+				where tt.order_status !='5' and tt.order_status !='6'
+        ORDER BY tt.flowId;
+    </select>
+
+    <select id="exportOrderManageExcel" parameterType="java.lang.String" resultType="TemPlateExcelVo">
+        select
+        o.id 'orderId',
+        o.flow_id 'flowId',
+        DATE_FORMAT(o.order_date,'%Y-%m-%d') 'orderDate',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.order_unit_name 'orderUnitName',p.product_number 'productTotalCount',p.product_price 'productPrice',p.product_amount 'productTotalAmount',
+        <!-- p.label_prefix 'prefixName',
+        p.supplier 'supplier', -->
+        p.label_start 'labelStart',
+        p.label_end 'labelEnd',
+        <!-- p.label_suffix 'labelSuffix', -->
+        p.product_number 'expressTotalCount',p.product_amount 'expressTotalAmount',
+        o.order_type 'orderType',
+        (SELECT a.arrival_account FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC) 'arrivalAccount',
+        (select COUNT(*) from order_invoice a where a.order_id = o.id and a.is_del = o.is_del ) 'invoiceNum',
+        DATE_FORMAT(o.billing_date,'%Y-%m-%d') 'billingDate',
+        DATE_FORMAT((SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+        p.product_list_id 'productListId',
+        p.product_name 'productName',p.product_type 'productType',
+        (select a.`name` from tbl_area_info a where a.id = area.parent_id) 'regionName',
+        (select a.sale_manager from tbl_area_info a where a.id = o.province_code) 'saleManager',
+        o.receive_name 'receiveName',
+        o.receive_phone 'receivePhone',
+        o.receive_mobile 'receiveMobile',
+        o.receive_unit_address 'receiveUnitAddress'
+
+        from order_product p
+         LEFT JOIN `order` o on o.id = p.order_id and o.is_del = p.is_del
+         LEFT JOIN tbl_area_info area on o.province_code = area.id
+        where p.is_del=FALSE  and o.order_status != '5' and o.order_status != '6' and YEAR(o.order_date) = #{year}
+        order by o.flow_id ASC;
+    </select>
+</mapper>

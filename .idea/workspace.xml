@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DigCerServiceNet_Source" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="750ab711-d83e-4309-85fc-0ed2dde0228a" name="Default" comment="1.服务" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DigCerServiceNet$DigCerServiceNet.coverage" NAME="DigCerServiceNet Coverage Results" MODIFIED="1567405750952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="mapper.xml" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/pages/CompanyUser/exceltemplate/templateIndex.jsp" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CommonUser/order/detailsInvoice.jsp" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CompanyUser/system/userManage.jsp" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CommonUser/orderquery/orderList.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CompanyUser/orderquery/orderIndex.jsp" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CommonUser/orderquery/detailsOrder.jsp" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CompanyUser/importexport/importExportIndex.jsp" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/pages/CommonUser/order/OrderSubmit.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1dLNKbjG0nbJXxmzX2Rl36etKa0" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>JSP Inspections</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory&#10;module" />
+    <property name="SearchEverywhereHistoryKey" value="Da&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/utils/DateUtils.java&#10;Job&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/task/ExecuteJob.java&#10;OrderRe&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/TblOrderReport.java&#10;java.ext&#9;FILE&#9;jar://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/lib/fastjson-1.2.58.jar!/META-INF/services/javax.ws.rs.ext.MessageBodyReader&#10;orderRe&#9;PSI&#9;JAVA://cn.com.common.model.TblOrderReport&#10;Ba&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/agent/BaseDomain.java&#10;new-&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/css/new-css.css&#10;log&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/profile/dev/log4j.properties&#10;Date&#9;PSI&#9;JAVA://cn.com.common.utils.DateUtils&#10;ho&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/inc/home.jsp&#10;ehcache&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/spring/ehcache.xml&#10;weld-osgi-bundle&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/lib/j2ee7/weld-osgi-bundle.jar&#10;CaCheManager&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/cache/CaCheManager.java&#10;frame&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/images/home/inc/frame.png&#10;sf.ehcache&#9;FILE&#9;jar://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/lib/ehcache-2.8.1.jar!/rest-management-private-classpath/META-INF/services/net.sf.ehcache.management.ManagementServer&#10;CommonController&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/controller/CommonController.java&#10;com&#9;PSI&#9;JAVA://cn.com.common.controller.CommonController&#10;mcha&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/lib/datasource/mchange-commons-java-0.2.3.jar&#10;mch&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/lib/datasource/mchange-commons-java-0.2.3.jar&#10;productU&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/utils/ProductUtils.java&#10;OrderV&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/dto/OrderVo.java&#10;sell&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/CompanyUser/system/sellProduct.jsp&#10;TblProductionProductSearcher&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/search/TblProductionProductSearcher.java&#10;Tbl&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/search/TblProductionProductSearcher.java&#10;new-css&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/css/new-css.css&#10;order&#9;PSI&#9;JAVA://cn.com.common.model.Order&#10;botto&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/inc/bottom.jsp&#10;tblOrd&#9;PSI&#9;JAVA://cn.com.common.model.TblOrderReport&#10;receipt&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/model/receipt.xml&#10;Ex&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/utils/ExportUtil.java&#10;fil&#9;PSI&#9;JAVA://cn.com.commonUser.controller.FileController&#10;home.jsp&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/inc/home.jsp&#10;deta&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/CommonUser/orderquery/detailsOrder.jsp&#10;Express&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/OrderExpress.java&#10;de&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/CommonUser/orderquery/detailsOrder.jsp&#10;ex&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/agent/BeanUtilsEx.java&#10;bea&#9;FILE&#9;jar://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/WEB-INF/lib/spring/spring-beans-3.2.8.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java&#10;orderEx&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/OrderExpress.java&#10;express&#9;PSI&#9;JAVA://cn.com.common.model.OrderExpress&#10;fileType&#9;PSI&#9;JAVA://cn.com.common.model.TblOrderReport#fileType&#10;site&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/js/site.js&#10;Order&#9;PSI&#9;JAVA://cn.com.common.model.Order&#10;ExcelTemplateMapper&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/companyUser/dao/ExcelTemplateMapper.xml&#10;tbl&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/src/cn/com/common/model/TblHome.java&#10;home&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/css/home.css&#10;top&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/css/top.css&#10;tblHome&#9;PSI&#9;JAVA://cn.com.common.model.TblHome&#10;tbl_home&#9;null&#9;null&#10;dingg&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/images/left/dinggou.png&#10;home/&#9;FILE&#9;file://D:/development/IntelliJ IDEA 2016.2.5/workspaces/DigCerServiceNet/web/pages/inc/home.jsp" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15479332" />
+    <property name="project.structure.side.proportion" value="0.39075145" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\WEB-INF\properties" />
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\pages\inc" />
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\images\common" />
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\images\home" />
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\images\home\inc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.com.common.model.search" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\WEB-INF\lib\datasource" />
+      <recent name="D:\development\IntelliJ IDEA 2016.2.5\workspaces\DigCerServiceNet\web\js\datepicker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.DigCerServiceNet">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration name="CaCheManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.com.common.cache.CaCheManager" />
+      <module name="DigCerServiceNet" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.com.common.cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="grailsApplicationRoot" value="" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DigCerServiceNet" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.11_v2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="a0655d5f-7750-43cb-b4d8-68b128a427c8" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dcom.sun.management.jmxremote.authenticate=false -Djava.net.preferIPv4Stack=true" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+      <deployment>
+        <artifact name="DigCerServiceNet_Source">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_DigCerServiceNet" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51408" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DigCerServiceNet_Source" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="demoWar" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.11_v2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DigCerServiceNetV2.0">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_DigCerServiceNet_4" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54271" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DigCerServiceNetV2.0" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.CaCheManager" />
+      <item itemvalue="Tomcat Server.DigCerServiceNet" />
+      <item itemvalue="Tomcat Server.demoWar" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CaCheManager" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\69094\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="750ab711-d83e-4309-85fc-0ed2dde0228a" name="Default" comment="" />
+      <created>1561688169476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561688169476</updated>
+      <workItem from="1561688170712" duration="19721000" />
+      <workItem from="1561941566933" duration="25271000" />
+      <workItem from="1561968438057" duration="5568000" />
+      <workItem from="1562028186305" duration="5687000" />
+      <workItem from="1562045029063" duration="14673000" />
+      <workItem from="1562115300274" duration="25392000" />
+      <workItem from="1562201363286" duration="25011000" />
+      <workItem from="1562287598638" duration="17620000" />
+      <workItem from="1562550722682" duration="19979000" />
+      <workItem from="1562632979051" duration="29034000" />
+      <workItem from="1562719131485" duration="7817000" />
+      <workItem from="1562727232656" duration="16681000" />
+      <workItem from="1562806469746" duration="22877000" />
+      <workItem from="1562893075309" duration="18327000" />
+      <workItem from="1562914817358" duration="5254000" />
+      <workItem from="1563151760428" duration="18860000" />
+      <workItem from="1563238018709" duration="22638000" />
+      <workItem from="1563324852119" duration="23140000" />
+      <workItem from="1563411559142" duration="13054000" />
+      <workItem from="1563497577234" duration="12220000" />
+      <workItem from="1563755968501" duration="22587000" />
+      <workItem from="1563842762029" duration="1284000" />
+      <workItem from="1563844216834" duration="11024000" />
+      <workItem from="1563929060822" duration="918000" />
+      <workItem from="1563930020553" duration="273000" />
+      <workItem from="1563930316785" duration="395000" />
+      <workItem from="1563930738026" duration="15113000" />
+      <workItem from="1564020826124" duration="17905000" />
+      <workItem from="1564102561117" duration="8507000" />
+      <workItem from="1564361008439" duration="1186000" />
+      <workItem from="1564362216027" duration="18246000" />
+      <workItem from="1564448050095" duration="21771000" />
+      <workItem from="1564534917504" duration="2758000" />
+      <workItem from="1564537820721" duration="2031000" />
+      <workItem from="1564540539797" duration="13499000" />
+      <workItem from="1564620436889" duration="13914000" />
+      <workItem from="1564707134930" duration="14339000" />
+      <workItem from="1564965729782" duration="22343000" />
+      <workItem from="1565054818755" duration="19438000" />
+      <workItem from="1565140061226" duration="2105000" />
+      <workItem from="1565143232210" duration="15805000" />
+      <workItem from="1565226330489" duration="14791000" />
+      <workItem from="1565328269791" duration="12761000" />
+      <workItem from="1565570611220" duration="350000" />
+      <workItem from="1565574598680" duration="8806000" />
+      <workItem from="1557903136367" duration="6512000" />
+      <workItem from="1565657455636" duration="22386000" />
+      <workItem from="1565743337019" duration="10173000" />
+      <workItem from="1565760360545" duration="1897000" />
+      <workItem from="1565762288992" duration="56000" />
+      <workItem from="1565762369338" duration="49000" />
+      <workItem from="1565762446610" duration="799000" />
+      <workItem from="1565763317202" duration="107000" />
+      <workItem from="1565763461827" duration="1514000" />
+      <workItem from="1565765025824" duration="266000" />
+      <workItem from="1565765325411" duration="514000" />
+      <workItem from="1565765884494" duration="532000" />
+      <workItem from="1565766454875" duration="1236000" />
+      <workItem from="1565767718309" duration="5639000" />
+      <workItem from="1565830872797" duration="3555000" />
+      <workItem from="1565838497250" duration="5333000" />
+      <workItem from="1565917995153" duration="20662000" />
+      <workItem from="1566176040443" duration="15089000" />
+      <workItem from="1566263275357" duration="3343000" />
+      <workItem from="1566266670631" duration="8335000" />
+      <workItem from="1566350142021" duration="10142000" />
+      <workItem from="1566374573756" duration="3443000" />
+      <workItem from="1566434948545" duration="1540000" />
+      <workItem from="1566437182769" duration="82000" />
+      <workItem from="1566437312753" duration="18107000" />
+      <workItem from="1566522631457" duration="12295000" />
+      <workItem from="1566781130608" duration="22610000" />
+      <workItem from="1566867985226" duration="17814000" />
+      <workItem from="1566953590652" duration="12846000" />
+      <workItem from="1566981557948" duration="2234000" />
+      <workItem from="1567040689306" duration="9836000" />
+      <workItem from="1567128970270" duration="8304000" />
+      <workItem from="1567385301316" duration="1035000" />
+      <workItem from="1567392012417" duration="10172000" />
+      <workItem from="1567471999918" duration="13272000" />
+      <workItem from="1567558759572" duration="18317000" />
+      <workItem from="1567646354037" duration="10434000" />
+      <workItem from="1567731433926" duration="7219000" />
+      <workItem from="1568091919012" duration="3454000" />
+      <workItem from="1568165213206" duration="15175000" />
+      <workItem from="1568251863949" duration="1911000" />
+      <workItem from="1568598535407" duration="4899000" />
+      <workItem from="1568682843943" duration="12598000" />
+      <workItem from="1568778084441" duration="8825000" />
+      <workItem from="1568945499239" duration="1337000" />
+      <workItem from="1569201660657" duration="729000" />
+      <workItem from="1569216520927" duration="881000" />
+      <workItem from="1569217483615" duration="166000" />
+      <workItem from="1569217716191" duration="6857000" />
+      <workItem from="1569289448183" duration="13907000" />
+      <workItem from="1569375788191" duration="13101000" />
+      <workItem from="1569461209068" duration="17806000" />
+      <workItem from="1569546256925" duration="5825000" />
+      <workItem from="1569721809965" duration="2005000" />
+      <workItem from="1569733998684" duration="4754000" />
+      <workItem from="1569805417320" duration="6160000" />
+      <workItem from="1570496865366" duration="8215000" />
+      <workItem from="1570583287615" duration="18386000" />
+      <workItem from="1570669341613" duration="13665000" />
+      <workItem from="1570774205990" duration="53000" />
+      <workItem from="1570845128418" duration="3980000" />
+      <workItem from="1571030150025" duration="13639000" />
+      <workItem from="1571100632589" duration="6298000" />
+      <workItem from="1571281295114" duration="599000" />
+      <workItem from="1571293640620" duration="888000" />
+      <workItem from="1571363443085" duration="2244000" />
+      <workItem from="1571620688283" duration="19830000" />
+      <workItem from="1571708147947" duration="15118000" />
+      <workItem from="1571735652042" duration="529000" />
+      <workItem from="1571791847461" duration="15472000" />
+      <workItem from="1571879536551" duration="19575000" />
+      <workItem from="1571965948597" duration="23269000" />
+      <workItem from="1572224287349" duration="5617000" />
+      <workItem from="1572241425768" duration="3735000" />
+      <workItem from="1572311397750" duration="18684000" />
+      <workItem from="1572397148485" duration="9359000" />
+      <workItem from="1572483847714" duration="19409000" />
+      <workItem from="1572570141554" duration="6726000" />
+      <workItem from="1572672011177" duration="1162000" />
+      <workItem from="1573002645133" duration="21259000" />
+      <workItem from="1573087833090" duration="22867000" />
+      <workItem from="1573176937305" duration="17196000" />
+      <workItem from="1573433695129" duration="23511000" />
+      <workItem from="1573520385448" duration="16245000" />
+      <workItem from="1573606664305" duration="5462000" />
+      <workItem from="1573612935068" duration="14806000" />
+      <workItem from="1573693001728" duration="3627000" />
+      <workItem from="1573708047862" duration="2506000" />
+      <workItem from="1573780076196" duration="12773000" />
+      <workItem from="1574038838225" duration="15929000" />
+      <workItem from="1574124546830" duration="16866000" />
+      <workItem from="1574212159334" duration="14638000" />
+      <workItem from="1574299788193" duration="8189000" />
+      <workItem from="1574385382830" duration="14258000" />
+      <workItem from="1574643904442" duration="13143000" />
+      <workItem from="1574730350517" duration="6993000" />
+      <workItem from="1574833896019" duration="2048000" />
+      <workItem from="1574903100365" duration="1980000" />
+      <workItem from="1574991280418" duration="6404000" />
+      <workItem from="1575249417029" duration="2512000" />
+      <workItem from="1566458447016" duration="1299000" />
+      <workItem from="1575335143834" duration="5529000" />
+      <workItem from="1575424799426" duration="5622000" />
+      <workItem from="1575508653105" duration="1017000" />
+      <workItem from="1575593905183" duration="15000" />
+      <workItem from="1575853915741" duration="371000" />
+      <workItem from="1575855064543" duration="791000" />
+      <workItem from="1576112822760" duration="1777000" />
+      <workItem from="1577427897738" duration="1195000" />
+      <workItem from="1577429183956" duration="2006000" />
+      <workItem from="1577669270984" duration="18576000" />
+      <workItem from="1577754319426" duration="14689000" />
+      <workItem from="1577928095529" duration="8480000" />
+      <workItem from="1577945285161" duration="9273000" />
+      <workItem from="1578013525374" duration="10799000" />
+      <workItem from="1578273493181" duration="17300000" />
+      <workItem from="1578358963658" duration="15836000" />
+      <workItem from="1578445795204" duration="15364000" />
+      <workItem from="1578532043975" duration="18626000" />
+      <workItem from="1578618334821" duration="13482000" />
+      <workItem from="1578876980815" duration="17950000" />
+      <workItem from="1578963962447" duration="15035000" />
+      <workItem from="1579048073462" duration="1385000" />
+      <workItem from="1579136350800" duration="9071000" />
+      <workItem from="1579221723868" duration="7910000" />
+      <workItem from="1579394199576" duration="13609000" />
+      <workItem from="1579481916343" duration="4646000" />
+      <workItem from="1581555204604" duration="13982000" />
+      <workItem from="1581642298942" duration="6307000" />
+      <workItem from="1581902103967" duration="13251000" />
+      <workItem from="1581987408089" duration="14897000" />
+      <workItem from="1582074170392" duration="14741000" />
+      <workItem from="1582099771081" duration="1583000" />
+      <workItem from="1582246467937" duration="10534000" />
+      <workItem from="1582592657066" duration="5268000" />
+      <workItem from="1583198918645" duration="531000" />
+      <workItem from="1583199562792" duration="8518000" />
+      <workItem from="1583804508062" duration="2254000" />
+      <workItem from="1584410981050" duration="13460000" />
+      <workItem from="1585011524577" duration="1021000" />
+      <workItem from="1585012571540" duration="12314000" />
+      <workItem from="1585113114940" duration="4998000" />
+      <workItem from="1585530180691" duration="2697000" />
+      <workItem from="1585616716523" duration="920000" />
+      <workItem from="1585619204954" duration="4747000" />
+      <workItem from="1585703007268" duration="1224000" />
+      <workItem from="1585727518843" duration="5524000" />
+      <workItem from="1585876010891" duration="1357000" />
+      <workItem from="1585878974792" duration="3613000" />
+      <workItem from="1586239689390" duration="2000000" />
+      <workItem from="1586394011064" duration="8170000" />
+      <workItem from="1586498588476" duration="2856000" />
+      <workItem from="1586501699266" duration="4970000" />
+      <workItem from="1586739608690" duration="6709000" />
+      <workItem from="1586762300739" duration="10000" />
+      <workItem from="1586829221318" duration="16568000" />
+      <workItem from="1586913130203" duration="13887000" />
+      <workItem from="1586998931267" duration="20073000" />
+      <workItem from="1587088744396" duration="2465000" />
+      <workItem from="1587345232435" duration="97000" />
+      <workItem from="1587347936615" duration="17243000" />
+      <workItem from="1587430377817" duration="2644000" />
+      <workItem from="1587445381305" duration="11000" />
+      <workItem from="1587446834408" duration="10983000" />
+      <workItem from="1587517704920" duration="15700000" />
+      <workItem from="1587604777516" duration="5263000" />
+      <workItem from="1587695382496" duration="9226000" />
+      <workItem from="1587862751315" duration="10334000" />
+      <workItem from="1587878999029" duration="232000" />
+      <workItem from="1587883263208" duration="3498000" />
+      <workItem from="1587949229355" duration="13765000" />
+      <workItem from="1588037828369" duration="9505000" />
+      <workItem from="1588122328062" duration="15568000" />
+      <workItem from="1588209312591" duration="9405000" />
+      <workItem from="1588727695182" duration="3515000" />
+      <workItem from="1588733011127" duration="6137000" />
+      <workItem from="1588746646327" duration="70000" />
+      <workItem from="1588746745556" duration="254000" />
+      <workItem from="1588747028911" duration="875000" />
+      <workItem from="1589173581026" duration="1240000" />
+      <workItem from="1588750534231" duration="3089000" />
+      <workItem from="1588813060973" duration="2787000" />
+      <workItem from="1588828359481" duration="4276000" />
+      <workItem from="1588901883195" duration="6079000" />
+      <workItem from="1588986560475" duration="465000" />
+      <workItem from="1589175219365" duration="301000" />
+      <workItem from="1589179125654" duration="2421000" />
+      <workItem from="1589252587911" duration="3046000" />
+      <workItem from="1589429126027" duration="4074000" />
+      <workItem from="1589520119455" duration="375000" />
+      <workItem from="1589769507976" duration="10461000" />
+      <workItem from="1589853592830" duration="2977000" />
+      <workItem from="1589953866863" duration="265000" />
+      <workItem from="1590029052150" duration="3904000" />
+      <workItem from="1590386199207" duration="3312000" />
+      <workItem from="1590977528981" duration="619000" />
+      <workItem from="1591581611062" duration="163000" />
+      <workItem from="1591582704388" duration="626000" />
+      <workItem from="1591596336820" duration="1406000" />
+      <workItem from="1591664613838" duration="1910000" />
+      <workItem from="1591770570784" duration="625000" />
+      <workItem from="1591940645089" duration="1453000" />
+      <workItem from="1591947852488" duration="108000" />
+      <workItem from="1592200352787" duration="1662000" />
+      <workItem from="1592356923711" duration="2645000" />
+      <workItem from="1592379339573" duration="3160000" />
+      <workItem from="1592441824620" duration="124000" />
+      <workItem from="1592443873049" duration="613000" />
+      <workItem from="1592529050485" duration="595000" />
+      <workItem from="1592618496753" duration="615000" />
+      <workItem from="1592792720463" duration="3542000" />
+      <workItem from="1593503981863" duration="5000" />
+      <workItem from="1593572283675" duration="1256000" />
+      <workItem from="1593592318191" duration="21000" />
+      <workItem from="1593652427822" duration="632000" />
+      <workItem from="1594185906246" duration="637000" />
+      <workItem from="1594258272127" duration="18000" />
+      <workItem from="1594879439832" duration="267000" />
+      <workItem from="1594879837962" duration="275000" />
+      <workItem from="1595209746570" duration="147000" />
+      <workItem from="1595316909457" duration="36000" />
+      <workItem from="1595317438303" duration="4520000" />
+      <workItem from="1595473125511" duration="2729000" />
+    </task>
+    <task id="LOCAL-00053" summary="1.服务网首页兼容性调整">
+      <created>1573522598430</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1573522598430</updated>
+    </task>
+    <task id="LOCAL-00054" summary="1、订单查询&#10;   1）查询结果中，订单“产品名称”列，最后一个“、”不需要&#10;   2）查询结果导出&#10;      不支持导出全部查询结果数据 &#10;   3）数据导出模板选择中，可选择的模板名称，建议与“模板管理”中的“系统模板”名称保持一致。&#10;   4）选中3个订单，点击“数据导出”，选择“财务开票单”，显示404错误&#10;   5）选中3个订单，点击“数据导出”，选择“自定义汇总模板”，显示404错误&#10;   6）“证书下单时间”建议修改为“下单时间”&#10;   &#10;   7）“全量检索”与“查询”按钮冲突，建议去掉“全量检索”，增加“重置”按钮，是否可满足需要待讨论。&#10;   &#10;   8）用户下单时，填写了“公安数字证书”的两个号段，卖家查询订单展示中，产品名称显示为“公安数字证书、公安数字证书、”，同一产品名称显示两遍不合理，建议去重。&#10;&#10;三、订单详情&#10;   1）2019年11月9日下午17:36进行“下载附件”，下载后的附件名称为“19-017_上海市公安局_2019年11月9日05时36分43秒.zip”&#10;      时间与实际时间相差12小时，建议使用24小时记时法。&#10;   2）登记到款，“汇款单位/汇款人”显示框中信息显示位置较小，单位名称长时不能全部显示，建议：4个输入框等宽   &#10;   &#10;四、订单操作记录&#10;   是否增加证书订购、确认收货 环节的操记录？&#10;   &#10;五、导出导入&#10;1、界面效果&#10;   1）导出中，快递信息表、生产任务单位置调换下。 &#10;   2）“导出”和“导入”两个按钮，需要拉动滚动条才可以看到       &#10;&#10;2、导入操作&#10;   1）选择文件处理不记忆上次上传的文件路径&#10;   2）导入完成后，关闭窗口&#10;&#10;3、导出操作&#10;   1）导出的开票信息表中，“开票日期”对应的单元格格式建议设置为文本格式&#10;   2）导出的快递发运表中，“发货日期”对应的单元格格式建议设置为文本格式     &#10;&#10;六、系统管理&#10;   1）“文件优先级”建议修改为“文件排列顺序”。&#10;   2）查询结果中“上传文件级别”列名，建议修改为“文件排列顺序”。&#10;   3）查询结果中“文件图标名称”列，建议修改为“文件图标”，各行中显示文件图标。&#10;   4）文件上传，文件在买家首页中的排列顺序无法调整。&#10;      建议查询结果中，可在“文件排列顺序”列对应的值。&#10;&#10;七、模板管理&#10;   1）选择系统模块，“下载模板”按钮，需要拉动滚动条才可以看到。">
+      <created>1573697025851</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1573697025851</updated>
+    </task>
+    <task id="LOCAL-00055" summary="3、选购&#10;   1）选择解码证书，填写位数不对的编号，提示“起始编号：证书机构编码不符合要求”，建议提示信息中“编码”改为“编号”   【已完成】&#10;   2）浙江省的指纹证书标号变更，详细参考《浙江省证书编号规则.docx》&#9;【已完成】&#10;4、开票信息 &#10;   1）备注右侧需要增加“保存”按钮，保存开票栏备注及以上的信息。&#9;【已完成】&#10;   2）新增开票，“（或统一社会信用代码）”字体调小，和“纳税人识别号：”  宽度保持一致，避免“码）”换到下一行&#9;【已完成】&#10;6、证书查询&#10;   1）菜单名称建议修改为“订单查询”     【已完成】&#10;   2）订单提交人的选择条件中，“公司用户”修改为“本单位用户”&#9;&#9;【已完成】&#10;   3）证书类型名称后面，下拉款和输入框的条件输入，都是证书类型名称，建议保留一种。&#9;【已完成】&#10;   4）已退回的订单，如果退回原因为空，则订单状态中“已退回，原因：”，去掉“，原因：”   &#9;【已完成】&#10;   5）“查询”右侧增加“重置”按钮，点击该按钮后，重置当前的输入条件为初始值  &#9;【已完成】">
+      <created>1574041539365</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1574041539365</updated>
+    </task>
+    <task id="LOCAL-00056" summary="1、首页，“相关下载”下的文件，文件名签名没有看到图标&#10;2、首页，点击“证书订购”，进入证书定后页面，该页面的导航栏处为空白；&#10;   点击产品对应的“前往选购”，存在同样问题&#10;3、编辑开票信息，修改后一般是“保存”信息，而不是“添加”，如果不修改，用户需要有“返回”按钮&#10;4、“汇款信息”根据情况显示为“汇款单位”或“汇款人”">
+      <created>1574239438095</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1574239438096</updated>
+    </task>
+    <task id="LOCAL-00057" summary="删除未引用页面">
+      <created>1574399908454</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1574399908455</updated>
+    </task>
+    <task id="LOCAL-00058" summary="1.更新临时路径">
+      <created>1574400120534</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1574400120534</updated>
+    </task>
+    <task id="LOCAL-00059" summary="删除未引用页面">
+      <created>1574400202014</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1574400202014</updated>
+    </task>
+    <task id="LOCAL-00060" summary="1.订单详情，开票信息合并单元格">
+      <created>1574733387879</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1574733387879</updated>
+    </task>
+    <task id="LOCAL-00061" summary="1.合并单元格垂直居中">
+      <created>1575439550848</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1575439550864</updated>
+    </task>
+    <task id="LOCAL-00062" summary="1.导出快递发运单">
+      <created>1577671484888</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1577671484888</updated>
+    </task>
+    <task id="LOCAL-00063" summary="1.导入快递发运单">
+      <created>1577695092782</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1577695092783</updated>
+    </task>
+    <task id="LOCAL-00064" summary="1.生产注意事项开发">
+      <created>1578017008046</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1578017008047</updated>
+    </task>
+    <task id="LOCAL-00065" summary="订单状态，“已到款待生产”，修改为“待生产”；&#10;      生产中的三个状态修改为：“生产中-待生产”、“生产中-生产中”，“生产中-生产完待发货”。">
+      <created>1578017215482</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1578017215482</updated>
+    </task>
+    <task id="LOCAL-00066" summary="订单详情：产品快递信息展示及变更">
+      <created>1578446202091</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1578446202091</updated>
+    </task>
+    <task id="LOCAL-00067" summary="订单详情快递信息变更及电子发票开发。">
+      <created>1578635175971</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1578635175971</updated>
+    </task>
+    <task id="LOCAL-00068" summary="买家订单详情，快递单号显示。">
+      <created>1578894562379</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1578894562380</updated>
+    </task>
+    <task id="LOCAL-00069" summary="1.调整ie children 不兼容情况">
+      <created>1578964319993</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1578964319993</updated>
+    </task>
+    <task id="LOCAL-00070" summary="1.订单状态系统定时任务变更为已完成，以最后一次生产任务单号导入日期，后7天 变更。">
+      <created>1578980554317</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1578980554317</updated>
+    </task>
+    <task id="LOCAL-00071" summary="1.修复导航栏&gt;&gt; 错位情况。">
+      <created>1579396984762</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1579396984762</updated>
+    </task>
+    <task id="LOCAL-00072" summary="1.用户订单查询列表签收单上传功能。">
+      <created>1581570902431</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1581570902432</updated>
+    </task>
+    <task id="LOCAL-00073" summary="1.解决签收单每次点击预览图片重复读取情况。">
+      <created>1581648064498</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1581648064499</updated>
+    </task>
+    <task id="LOCAL-00074" summary="优化首页，背景图片超出底色错位。">
+      <created>1581903878821</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1581903878821</updated>
+    </task>
+    <task id="LOCAL-00075" summary="优化首页，背景图片超出底色错位。">
+      <created>1581903984525</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1581903984541</updated>
+    </task>
+    <task id="LOCAL-00076" summary="导出导入：卖家发票快递信息上传">
+      <created>1582076138791</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1582076138792</updated>
+    </task>
+    <task id="LOCAL-00077" summary="订单详情：发票快递信息预览查看">
+      <created>1582078938878</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1582078938878</updated>
+    </task>
+    <task id="LOCAL-00078" summary="1.添加缓存查询，缓存删除&#10;2.修复卖家：订单查询，选中数据导出，无反应问题。&#10;3.修复卖家：订单详情，留言提交以后，一直加载中问题。">
+      <created>1585028497283</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1585028497283</updated>
+    </task>
+    <task id="LOCAL-00079" summary="1.证书订购,浙江：辅警指纹证书标号需要变更为FZ&#10;2.证书订购,浙江：公安指纹证书标号需要变更为GZ&#10;3.订单详情,订单进入已受理待付款环节，卖家需要添加退回，编辑操作按钮&#10;4.订单详情,重新审核按钮文案需要变更为退回重审&#10;5.订单详情,关闭重新审核按钮文案需要变更为完成重审&#10;6.导入导出,快递发运单文案需要变更为快递面单信息&#10;7.导入导出,导入到款信息功能需要隐藏&#10;8.导入导出,模块顺序调整：市场-》生产">
+      <created>1585877335537</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1585877335537</updated>
+    </task>
+    <task id="LOCAL-00080" summary="1.签收单发货日期未填写。建议系统自动生成本周周五日期。&#10;2.任务单中证书数量列调整至证书编号前面。&#10;3.选择日期需要默认为当前周周一日期。">
+      <created>1586505668288</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1586505668289</updated>
+    </task>
+    <task id="LOCAL-00081" summary="1.解决底部信息栏有滚动现象。&#10;2.解决订购单个证书只需要填写起始号即可。">
+      <created>1586830210359</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1586830210359</updated>
+    </task>
+    <task id="LOCAL-00082" summary="1.借转销功能开发。">
+      <created>1586833119796</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1586833119796</updated>
+    </task>
+    <task id="LOCAL-00083" summary="1.订单详情，修复开票信息合并单元问题。">
+      <created>1586853361024</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1586853361024</updated>
+    </task>
+    <task id="LOCAL-00084" summary="1.证书服务网证书订购号段校验，编码实现调整为三段校验。&#10;代码校验调整为：前缀+（起始号+结束号）+订购类型。">
+      <created>1586919093403</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1586919093403</updated>
+    </task>
+    <task id="LOCAL-00085" summary="1.已售证书标号管理，证书录入功能迭代开发。">
+      <created>1586932076757</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1586932076757</updated>
+    </task>
+    <task id="LOCAL-00086" summary="1.已售证书标号管理，证书查询功能开发。">
+      <created>1587023109825</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1587023109826</updated>
+    </task>
+    <task id="LOCAL-00087" summary="1.证书订购校验自身订单。">
+      <created>1587366477836</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1587366477837</updated>
+    </task>
+    <task id="LOCAL-00088" summary="1.修复专网数据结束标号异常。">
+      <created>1587368004245</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1587368004245</updated>
+    </task>
+    <task id="LOCAL-00089" summary="1.首页底部菜单栏根据市场要求调整。">
+      <created>1587523086802</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1587523086802</updated>
+    </task>
+    <task id="LOCAL-00090" summary="1.首页选购样式调整。">
+      <created>1587711379229</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1587711379229</updated>
+    </task>
+    <task id="LOCAL-00091" summary="1.手动推送报表数据。&#10;2.分页格式调整。">
+      <created>1587878709237</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1587878709237</updated>
+    </task>
+    <task id="LOCAL-00092" summary="1、文件上传图片为白色，与背景色重合，需要更改选项为黑底。首页显示为白底。&#10;2、有五个字段待确认市场是否使用。&#10;3、产品选购，配件单选框与卡字重合，需要拉大间距。&#10;4、浙江警辅指纹，公安指纹证书。供货方 null值判断去除。&#10;5、用户端需要判断，状态为待生产变更显示为生产中&#10;6、已售证书标号管理添加证书编号，查中间号段查询不到&#10;7、增加关于页面可查看当前系统版本号&#10;">
+      <created>1587974262031</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1587974262031</updated>
+    </task>
+    <task id="LOCAL-00093" summary="1、关于页面">
+      <created>1588059804664</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1588059804665</updated>
+    </task>
+    <task id="LOCAL-00094" summary="1、增加产品校验方案。">
+      <created>1588137711296</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1588137711296</updated>
+    </task>
+    <task id="LOCAL-00095" summary="生产任务单下载，状态为待生产未变更为生产中--待生产&#10;快递发运信息导入，需要订单状态为生产中订单全部变更为发运中&#10;用户端省份香港，澳门，台湾 需要删除&#10;开具电子发票文案变更为：电子发票&#10;电子发票快递信息文案变更为：发票快递信息&quot;&#10;用户已关联订购单位，新证书订购时汇款单位未上下联动&#10;为防止误操作，卖家订单查询隐藏批量进入生产按钮。&#10;">
+      <created>1588139638842</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1588139638842</updated>
+    </task>
+    <task id="LOCAL-00096" summary="调整：统一社会代码分辨率低格式会往下&#10;">
+      <created>1588209464086</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1588209464087</updated>
+    </task>
+    <task id="LOCAL-00097" summary="卖家签收单下载功能开发。">
+      <created>1588215181643</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1588215181643</updated>
+    </task>
+    <task id="LOCAL-00098" summary="1.更改日志提示级别。&#10;2.系统变更日期修改。">
+      <created>1588217632485</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1588217632485</updated>
+    </task>
+    <task id="LOCAL-00099" summary="1.修复手动推送报表异常。&#10;2.关于版本号变更。">
+      <created>1588815295365</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1588815295366</updated>
+    </task>
+    <task id="LOCAL-00100" summary="1.上传附件忽略大小写。">
+      <created>1589769588013</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1589769588013</updated>
+    </task>
+    <task id="LOCAL-00101" summary="1.服务器断电，报表数据补救处理机制。">
+      <created>1591581744565</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1591581744566</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="订单详情：发票快递信息预览查看" />
+    <MESSAGE value="1.添加缓存查询，缓存删除&#10;2.修复卖家：订单查询，选中数据导出，无反应问题。&#10;3.修复卖家：订单详情，留言提交以后，一直加载中问题。" />
+    <MESSAGE value="1.证书订购,浙江：辅警指纹证书标号需要变更为FZ&#10;2.证书订购,浙江：公安指纹证书标号需要变更为GZ&#10;3.订单详情,订单进入已受理待付款环节，卖家需要添加退回，编辑操作按钮&#10;4.订单详情,重新审核按钮文案需要变更为退回重审&#10;5.订单详情,关闭重新审核按钮文案需要变更为完成重审&#10;6.导入导出,快递发运单文案需要变更为快递面单信息&#10;7.导入导出,导入到款信息功能需要隐藏&#10;8.导入导出,模块顺序调整：市场-》生产" />
+    <MESSAGE value="1.签收单发货日期未填写。建议系统自动生成本周周五日期。&#10;2.任务单中证书数量列调整至证书编号前面。&#10;3.选择日期需要默认为当前周周一日期。" />
+    <MESSAGE value="1.解决底部信息栏有滚动现象。&#10;2.解决订购单个证书只需要填写起始号即可。" />
+    <MESSAGE value="1.借转销功能开发。" />
+    <MESSAGE value="1.订单详情，修复开票信息合并单元问题。" />
+    <MESSAGE value="1.证书服务网证书订购号段校验，编码实现调整为三段校验。&#10;代码校验调整为：前缀+（起始号+结束号）+订购类型。" />
+    <MESSAGE value="1.已售证书标号管理，证书录入功能迭代开发。" />
+    <MESSAGE value="1.已售证书标号管理，证书查询功能开发。" />
+    <MESSAGE value="1.证书订购校验自身订单。" />
+    <MESSAGE value="1.修复专网数据结束标号异常。" />
+    <MESSAGE value="1.首页底部菜单栏根据市场要求调整。" />
+    <MESSAGE value="1.首页选购样式调整。" />
+    <MESSAGE value="1.手动推送报表数据。&#10;2.分页格式调整。" />
+    <MESSAGE value="1、文件上传图片为白色，与背景色重合，需要更改选项为黑底。首页显示为白底。&#10;2、有五个字段待确认市场是否使用。&#10;3、产品选购，配件单选框与卡字重合，需要拉大间距。&#10;4、浙江警辅指纹，公安指纹证书。供货方 null值判断去除。&#10;5、用户端需要判断，状态为待生产变更显示为生产中&#10;6、已售证书标号管理添加证书编号，查中间号段查询不到&#10;7、增加关于页面可查看当前系统版本号&#10;" />
+    <MESSAGE value="1、关于页面" />
+    <MESSAGE value="1、增加产品校验方案。" />
+    <MESSAGE value="生产任务单下载，状态为待生产未变更为生产中--待生产&#10;快递发运信息导入，需要订单状态为生产中订单全部变更为发运中&#10;用户端省份香港，澳门，台湾 需要删除&#10;开具电子发票文案变更为：电子发票&#10;电子发票快递信息文案变更为：发票快递信息&quot;&#10;用户已关联订购单位，新证书订购时汇款单位未上下联动&#10;为防止误操作，卖家订单查询隐藏批量进入生产按钮。&#10;" />
+    <MESSAGE value="调整：统一社会代码分辨率低格式会往下&#10;" />
+    <MESSAGE value="卖家签收单下载功能开发。" />
+    <MESSAGE value="1.更改日志提示级别。&#10;2.系统变更日期修改。" />
+    <MESSAGE value="1.修复手动推送报表异常。&#10;2.关于版本号变更。" />
+    <MESSAGE value="1.上传附件忽略大小写。" />
+    <MESSAGE value="1.服务器断电，报表数据补救处理机制。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.服务器断电，报表数据补救处理机制。" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="792" y="428" key="#VCS_History_Cache_Settings" timestamp="1594879460482">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="792" y="428" key="#VCS_History_Cache_Settings/0.0.1920.1040@0.0.1920.1040" timestamp="1594879460482" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1595319028964">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595319028964" />
+    <state x="535" y="244" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1595319351700">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="535" y="244" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1536.824@0.0.1536.824" timestamp="1595319351700" />
+    <state x="467" y="102" key="CommitChangelistDialog2" timestamp="1592793443438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="467" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592793443438" />
+    <state width="423" height="466" key="DebuggerActiveHint" timestamp="1595473764179">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="423" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1595473764179" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1594879461244">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594879461244" />
+    <state x="551" y="278" key="FileChooserDialogImpl" timestamp="1595481473038">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="551" y="278" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595481473038" />
+    <state x="615" y="309" key="Github.ShareDialog" timestamp="1595481517623">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="615" y="309" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1595481517623" />
+    <state width="1152" height="326" key="GridCell.Tab.0.bottom" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.0.center" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.0.left" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.0.right" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.1.bottom" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.1.center" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.1.left" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.1.right" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707369" />
+    <state width="1152" height="326" key="GridCell.Tab.2.bottom" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.2.center" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.2.left" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.2.right" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.3.bottom" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.3.center" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.3.left" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state width="1152" height="326" key="GridCell.Tab.3.right" timestamp="1595481289607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1152" height="326" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1595481289607" />
+    <state width="1446" height="186" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594879707370" />
+    <state x="490" y="113" key="RollbackChangesDialog" timestamp="1595473958598">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="113" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595473958598" />
+    <state x="352" y="0" key="SettingsEditor" timestamp="1595481476688">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595481476688" />
+    <state x="440" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594258279947" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1595483122380">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595483122380" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594879552297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594879552297" />
+    <state x="278" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595473631068">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="278" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1595473631068" />
+    <state x="544" y="196" width="760" height="581" key="find.popup" timestamp="1595320561618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="544" y="196" width="760" height="581" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1595320561618" />
+    <state x="661" y="252" width="950" height="733" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593572296244" />
+    <state x="610" y="329" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1595483021768">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="610" y="329" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595483021768" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1595473483982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595473483982" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592200817190" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/web/WEB-INF/lib/spring/spring-beans-3.2.8.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java</url>
+          <line>597</line>
+          <option name="timeStamp" value="693" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/web/WEB-INF/lib/spring/spring-beans-3.2.8.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java</url>
+          <line>599</line>
+          <option name="timeStamp" value="695" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/companyUser/controller/OrderQueryCompanyController.java</url>
+          <line>424</line>
+          <option name="timeStamp" value="719" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/common/controller/CommonController.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="757" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/companyUser/controller/OrderQueryCompanyController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="809" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/companyUser/service/impl/SystemServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="867" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/companyUser/service/impl/OrderQueryCompanyServiceImpl.java</url>
+          <line>231</line>
+          <option name="timeStamp" value="917" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/companyUser/service/impl/OrderQueryCompanyServiceImpl.java</url>
+          <line>232</line>
+          <option name="timeStamp" value="918" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/common/task/ExecuteJob.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="920" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/companyUser/service/impl/OrderQueryCompanyServiceImpl.java</url>
+          <line>218</line>
+          <option name="timeStamp" value="924" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/common/controller/LoginController.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="936" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/com/common/controller/LoginController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="954" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+</project>

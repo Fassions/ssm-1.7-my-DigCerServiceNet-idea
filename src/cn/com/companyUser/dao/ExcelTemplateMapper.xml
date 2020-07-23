@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.companyUser.dao.ExcelTemplateMapper">
+
+    <select id="listTblTemplateExcelWithPage" resultType="TblTemplateExcelSearcher">
+        select s.id id,s.user_id userId,s.template_name templateName,s.excel_field excelField,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `tbl_template_excel` s
+        <trim prefix="where" prefixOverrides="and|or">
+            and s.user_id = #{userId} and s.is_del = false
+        </trim>
+        ORDER BY s.date_created desc;
+    </select>
+
+    <select id="getTblTemPlateExcel" parameterType="java.util.Map" resultType="TblTemplateExcel">
+        select s.id id,s.user_id userId,s.template_name templateName,s.excel_field excelField,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `tbl_template_excel` s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="id!=null"> and s.id=#{id} </if><if test="userId!=null"> and s.user_id=#{userId} </if><if test="templateName!=null"> and s.template_name=#{templateName} </if><if test="excelField!=null"> and s.excel_field=#{excelField} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+        </trim>
+    </select>
+
+    <select id="getExportTemplateExcelByOrderId"  resultType="TemPlateExcelVo">
+        select
+        o.id 'orderId',o.flow_id 'flowId',
+        DATE_FORMAT(o.order_date,'%Y-%m-%d') 'orderDate',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.order_unit_name 'orderUnitName',p.product_number 'productTotalCount',p.product_price 'productPrice',p.product_amount 'productTotalAmount',
+        p.label_prefix 'prefixName',p.supplier 'supplier',p.label_start 'labelStart',p.label_end 'labelEnd',
+        p.label_suffix 'labelSuffix',p.product_number 'expressTotalCount',p.product_amount 'expressTotalAmount',
+        o.order_type 'orderType',
+        (SELECT a.arrival_account FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC) 'arrivalAccount',
+        (select COUNT(*) from order_invoice a where a.order_id = o.id and a.is_del = o.is_del ) 'invoiceNum',
+        DATE_FORMAT(o.billing_date,'%Y-%m-%d') 'billingDate',
+        DATE_FORMAT((SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+        p.product_list_id 'productListId',
+        p.product_name 'productName',p.product_type 'productType',
+        (select a.`name` from tbl_area_info a where a.id = area.parent_id) 'regionName',
+        (select a.sale_manager from tbl_area_info a where a.id = o.province_code) 'saleManager',
+        o.receive_name 'receiveName',
+        o.receive_phone 'receivePhone',
+        o.receive_mobile 'receiveMobile',
+        o.receive_unit_address 'receiveUnitAddress'
+         from order_product p
+         LEFT JOIN `order` o on o.id = p.order_id and o.is_del = p.is_del
+         LEFT JOIN tbl_area_info area on o.province_code = area.id
+        <trim prefix="where" prefixOverrides="and|or">
+            and o.id in
+            <foreach collection="array" separator="," open="(" close=")" item="item">
+                #{item,jdbcType=VARCHAR}
+            </foreach>
+              and o.submit_status = '1' and p.is_del = FALSE
+             ORDER BY p.date_created
+        </trim>
+    </select>
+
+    <select id="getExcpressExcelByOrderId" resultType="TemPlateExcelVo">
+        select
+        o.id 'orderId',
+        o.flow_id 'flowId',o.receive_name 'receiveName',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+        o.receive_unit_address 'receiveUnitAddress',o.receive_unit_name 'receiveUnitName',
+        o.receive_phone 'receivePhone',o.receive_mobile 'receiveMobile'
+         from  `order` o
+        <trim prefix="where" prefixOverrides="and|or">
+            and o.id in
+            <foreach collection="array" separator="," open="(" close=")" item="item">
+                #{item,jdbcType=VARCHAR}
+            </foreach>
+            and o.is_del = FALSE
+        </trim>
+    </select>
+
+    <select id="getInvoiceExcelByOrderId" resultType="TemPlateExcelVo">
+        SELECT
+         o.id 'orderId',
+         i.id 'invoiceId',
+        DATE_FORMAT(o.billing_date,'%Y-%m-%d')  'billingDate',
+        (select a.`name` from tbl_area_info a where a.id = o.province_code) 'provinceName',
+        (select a.`name` from tbl_area_info a where a.id = o.city_code) 'cityName',
+         o.order_unit_name 'orderUnitName',o.flow_id 'flowId',p.product_number 'productTotalCount',
+         p.product_price 'productPrice',p.product_amount 'invoiceTotalAmount',
+        DATE_FORMAT((SELECT a.arrival_date FROM order_paid a where a.order_id = o.id and a.is_del = o.is_del GROUP BY p.order_id ORDER BY a.arrival_date DESC),'%Y-%m-%d') 'arrivalDate',
+        p.product_name 'productName',p.product_type 'productType',
+         i.invoice_type 'invoiceType',
+        (select a.`name` from tbl_area_info a where a.id = area.parent_id) 'regionName',
+        (select a.sale_manager from tbl_area_info a where a.id = o.province_code) 'saleManager'
+        from order_invoice_product p
+         LEFT JOIN `order` o on p.order_id = o.id and p.is_del = o.is_del
+         LEFT JOIN order_invoice i on p.order_invoice_id = i.id and p.is_del = i.is_del
+         LEFT JOIN tbl_area_info area on o.province_code = area.id
+        <trim prefix="where" prefixOverrides="and|or">
+            and o.id in
+            <foreach collection="array" separator="," open="(" close=")" item="item">
+                #{item,jdbcType=VARCHAR}
+            </foreach>
+             and o.is_del = FALSE
+        </trim>
+    </select>
+
+    <insert id="postTblTemplateExcel" parameterType="TblTemplateExcel">
+        INSERT INTO `tbl_template_excel` (`id`, `user_id`, `template_name`, `excel_field`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{userId},#{templateName},#{excelField},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <update id="putTblTemplateExcel" parameterType="TblTemPlateExcel">
+        update `tbl_template_excel` s
+        <trim prefix="set" prefixOverrides=",">
+            <if test="id!=null">,s.`id`=#{id} </if><if test="userId!=null">,s.`user_id`=#{userId} </if><if test="templateName!=null">,s.`template_name`=#{templateName} </if><if test="excelField!=null">,s.`excel_field`=#{excelField} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+            where s.id=#{id}
+    </update>
+
+    <delete id="deleteTblTemplateExcel" parameterType="java.lang.String">
+        delete from tbl_template_excel  where id = #{orderProductId};
+    </delete>
+
+</mapper>

@@ -1,0 +1,19 @@
+/*pop-up_box.js����������õ�css*/
+.drag_layer * { padding: 0; margin: 0; }
+.drag_layer {width: 450px; height: 270px; border: 1px solid #aaaaaa; padding: 3px; position: absolute; z-index:9999; top: 0px; left: 0px; background: #fff; overflow:hidden; }
+.drag_layer h2 {height: 25px; line-height: 25px; padding-left: 10px; padding-right:5px; font-size: 14px; color: #333; background-color: #b8e1fc; border: 1px solid #aaaaaa; cursor: move; position: relative;}
+.drag_layer .top_icon {float: right; height: 25px; width: 48px;}
+.drag_layer .top_icon a {display: inline-block; width: 24px; height: 24px;}
+.drag_layer .close {background: url('../images/tanchu/close.png') no-repeat 0 bottom;}
+.drag_layer .close:hover {background: url('../images/tanchu/close_h.png') no-repeat 0 0; }
+.drag_layer .max {background: url('../images/tanchu/max.png') no-repeat 0 bottom;}
+.drag_layer .max:hover {background: url('../images/tanchu/max_h.png') no-repeat 0 0; }
+.drag_layer .revert {background: url('../images/tanchu/revert.png') no-repeat 0 bottom;}
+.drag_layer .revert:hover {background: url('../images/tanchu/revert_h.png') no-repeat 0 0; }
+.drag_layer .content {padding-top: 5px; overflow:auto; }
+.drag_layer .content p {font-size: 15px; line-height: 18px; color: #666; text-indent: 28px; padding-bottom: 10px; font-family: arial; }
+.drag_layer .drag { width: 14px; height: 14px; overflow: hidden; background: url('../images/tanchu/drag_ico.png') no-repeat 1px 1px; cursor: nw-resize; position: absolute; top: 262px; right: 0; z-index: 2; }
+.bar_t { width: 410px; height: 4px; position: absolute; top: -2px; left: -2px; z-index: 1; cursor: n-resize; overflow: hidden; }
+.bar_b { width: 410px; height: 4px; position: absolute; bottom: -2px; left: -2px; z-index: 1; cursor: n-resize; overflow: hidden; }
+.bar_r { width: 4px; height: 110px; position: absolute; right: -2px; top: -2px; z-index: 1; cursor: e-resize; }
+.bar_l { width: 4px; height: 110px; position: absolute; left: -2px; top: -2px; z-index: 1; cursor: e-resize; }

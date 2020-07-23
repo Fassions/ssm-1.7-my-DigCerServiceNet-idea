@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.companyUser.dao.OrderCompanyMapper">
+
+    <select id="getOrderByOrderIdList" parameterType="java.util.Map" resultType="Order">
+        select s.id id,s.parent_id parentId,s.user_id userId,s.flow_id flowId,s.child_type childType,s.province_code provinceCode,s.city_code cityCode,s.order_type orderType,s.order_status orderStatus,s.order_invalid orderInvalid,s.is_affirm isAffirm,s.return_reason returnReason,s.remitter_type remitterType,s.remitter remitter,s.remark remark,s.order_date orderDate,s.product_total_count productTotalCount,s.product_total_amount productTotalAmount,s.invoice_type invoiceType,s.submit_status submitStatus,s.need_invoice needInvoice,s.need_before_invoice needBeforeInvoice,s.order_invoice_status orderInvoiceStatus,s.billing_date billingDate,s.complate_type complateType,s.file_name fileName,s.file_server_name fileServerName,s.order_unit_name orderUnitName,s.order_unit_address orderUnitAddress,s.purchaser purchaser,s.purchaser_mobile purchaserMobile,s.purchaser_phone purchaserPhone,s.receive_unit_name receiveUnitName,s.receive_unit_address receiveUnitAddress,s.receive_name receiveName,s.receive_mobile receiveMobile,s.receive_phone receivePhone,s.standby_name standbyName,s.standby_mobile standbyMobile,s.standby_phone standbyPhone,s.address_setting addressSetting,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel,s.production_error_status productionErrorStatus from `order` s
+        <trim prefix="where" prefixOverrides="and|or">
+            and s.id in
+            <foreach collection="orderId" separator="," open="(" close=")" item="item">
+                #{item,jdbcType=VARCHAR}
+            </foreach>
+            and s.is_del = false;
+        </trim>
+    </select>
+
+    <select id="getTblReportTask" parameterType="java.util.Map" resultType="TblReportTask">
+        select s.id id,s.builder_time builderTime,s.task_status taskStatus,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from tbl_report_task s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="id!=null"> and s.id=#{id} </if><if test="builderTime!=null"> and s.builder_time=#{builderTime} </if><if test="taskStatus!=null"> and s.task_status=#{taskStatus} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+            and s.is_del =false;
+        </trim>
+    </select>
+
+
+    <select id="getTblReportTaskBetween" parameterType="java.util.Map" resultType="TblReportTask">
+        select s.id id,s.builder_time builderTime,s.task_status taskStatus,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from tbl_report_task s
+        <trim prefix="where" prefixOverrides="and|or">
+             and s.builder_time &lt;= #{builderTime}
+            and s.task_status = 0
+            and s.is_del =false
+            LIMIT 1;
+        </trim>
+    </select>
+
+
+
+    <select id="getOrderPaidByOrderIdList" parameterType="java.util.Map" resultType="OrderPaid">
+        select s.id id,s.order_id orderId,s.arrival_date arrivalDate,s.arrival_amount arrivalAmount,s.is_total_arrival isTotalArrival,s.arrival_account arrivalAccount,s.remitter remitter,s.arrival_message arrivalMessage,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `order_paid` s
+        <trim prefix="where" prefixOverrides="and|or">
+            and s.order_id = #{orderId}
+        </trim>
+         and s.is_del = false;
+    </select>
+
+    <select id="listOrderHistoryStatusWithPage" parameterType="OrderHistoryStatusSearcher" resultType="OrderHistoryStatusSearcher">
+        select u.user_id userId,u.user_name userName,s.id id,s.order_id orderId,s.order_parent_id orderParentId,s.history_status historyStatus,s.order_invalid orderInvalid,s.return_reason returnReason,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `order_history_status` s LEFT JOIN user_info u on s.user_created = u.user_id and s.is_del = u.is_del
+        <trim prefix="where" prefixOverrides="and|or">
+            and s.order_id = #{orderId}
+        </trim>
+        ORDER BY s.date_created DESC
+    </select>
+
+    <select id="listOrderMemoWithPage" parameterType="OrderMemoSearcher" resultType="OrderMemoSearcher">
+        select u.user_id userId,u.user_name userName,s.id id,s.order_id orderId,s.memo memo,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `order_memo` s LEFT JOIN user_info u on s.user_created = u.user_id and s.is_del = u.is_del
+        <trim prefix="where" prefixOverrides="and|or">
+            and s.order_id = #{orderId}
+        </trim>
+        ORDER BY s.date_created DESC
+    </select>
+
+    <select id="getOrderMemo" parameterType="java.util.Map" resultType="OrderMemo">
+        select s.id id,s.order_id orderId,s.memo memo,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from  `order_memo` s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="id!=null"> and s.id=#{id} </if><if test="orderId!=null"> and s.order_id=#{orderId} </if><if test="memo!=null"> and s.memo=#{memo} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+            and s.is_del = false;
+        </trim>
+
+    </select>
+
+    <select id="getOrderProductionMemo" resultType="OrderProductionMemo" parameterType="java.util.Map">
+        select s.id id,s.order_id orderId,s.memo memo,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from order_production_memo s
+        <trim prefix="where" prefixOverrides="and|or">
+         <if test="id!=null"> and s.id=#{id} </if><if test="orderId!=null"> and s.order_id=#{orderId} </if><if test="memo!=null"> and s.memo=#{memo} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+            and s.is_del = false;
+        </trim>
+    </select>
+
+    <select id="getOrderMaxFlowId" resultType="java.lang.String">
+        SELECT MAX(s.flow_id) FROM `order` s where s.is_del=FALSE;
+    </select>
+
+    <insert id="postTblOrderUnit" parameterType="TblOrderUnit">
+        INSERT INTO `tbl_order_unit` (`id`, `order_unit_name`, `remark`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderUnitName},#{remark},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postTblReportTask" parameterType="TblReportTask">
+        INSERT INTO `tbl_report_task` (`id`, `builder_time`, `task_status`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{builderTime},#{taskStatus},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+
+    <insert id="postOrderProductionMemo" parameterType="OrderProductionMemo">
+        INSERT INTO `order_production_memo` (`id`, `order_id`, `memo`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderId},#{memo},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postOrderHistoryStatus" parameterType="orderHistoryStatus">
+        INSERT INTO `order_history_status` (`id`, `order_id`, `order_parent_id`, `history_status`, `return_reason`,`order_invalid`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderId},#{orderParentId},#{historyStatus},#{returnReason},#{orderInvalid},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postOrderMemo" parameterType="OrderMemo">
+        INSERT INTO `order_memo` (`id`, `order_id`, `memo`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderId},#{memo},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postOrderPaid" parameterType="OrderPaid">
+        INSERT INTO `order_paid` (`id`, `order_id`, `arrival_date`, `arrival_amount`, `is_total_arrival`, `arrival_account`, `remitter`, `arrival_message`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderId},#{arrivalDate},#{arrivalAmount},#{isTotalArrival},#{arrivalAccount},#{remitter},#{arrivalMessage},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postOrderExpress" parameterType="OrderExpress">
+        INSERT INTO `order_express` (`id`,`production_flow_id`, `order_id`, `order_parent_id`, `express_type`, `express_name`, `express_no`, `delivery_date`, `express_message`,`date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{productionFlowId},#{orderId},#{orderParentId},#{expressType},#{expressName},#{expressNo},#{deliveryDate},#{expressMessage},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <insert id="postOrderInvoiceExpress" parameterType="OrderInvoiceExpress">
+        INSERT INTO `order_invoice_express` (`id`, `order_id`,`flow_id`, `order_parent_id`, `express_name`, `express_no`, `delivery_date`, `express_message`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderId},#{flowId},#{orderParentId},#{expressName},#{expressNo},#{deliveryDate},#{expressMessage},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+
+    <resultMap id="plusResultListMap" type="cn.com.common.model.search.OrderQuerySearcher">
+        <id column="orderId" property="orderId"/>
+        <result column="user_id" property="userId"/>
+        <result column="userName" property="userName"/><result column="certificateCode" property="certificateCode"/>
+        <result column="flowId" property="flowId"/><result column="orderDate" property="orderDate"/>
+        <result column="orderStatus" property="orderStatus"/>
+        <result column="borrowType" property="borrowType"/><result column="returnReason" property="returnReason"/>
+        <result column="complateType" property="complateType"/><result column="receiveName" property="receiveName"/>
+        <result column="provinceCode" property="provinceCode" /><result column="provinceName" property="provinceName" />
+        <result column="cityCode" property="cityCode" /><result column="cityName" property="cityName" />
+        <result column="orderUnitName" property="orderUnitName" /><result column="" property="" />
+        <result column="purchaser" property="purchaser" /><result column="purchaserMobile" property="purchaserMobile" />
+        <result column="productTotalCount" property="productTotalCount" /><result column="productTotalAmount" property="productTotalAmount" />
+        <result column="orderType" property="orderType" /><result column="orderInvoiceStatus" property="orderInvoiceStatus" />
+        <result column="deliveryDate" property="deliveryDate" />
+        <result column="isWarn" property="isWarn"/>
+        <collection property="orderProducts" ofType="OrderProduct">
+            <result column="productName" property="productName"/><result column="productType" property="productType"/>
+            <result column="productNumber" property="productNumber"/><result column="productPrice" property="productPrice"/>
+            <result column="productAmount" property="productAmount"/>
+            <result column="labelStart" property="labelStart"/><result column="labelEnd" property="labelEnd"/>
+        </collection>
+
+    </resultMap>
+
+
+    <select id="companyListWithOrderQuery" parameterType="OrderQuerySearcher" resultMap="plusResultListMap">
+        SELECT
+        (select a.is_warn from order_message a where a.order_id = s.id and a.is_del = a.is_del and a.is_warn = TRUE GROUP BY a.is_warn)  isWarn,
+        (select e.delivery_date FROM order_express e WHERE e.order_id = s.id and e.is_del = s.is_del ORDER BY e.delivery_date desc LIMIT 0,1) as deliveryDate,
+        (select a.`name` from tbl_area_info a where a.id = s.province_code ) provinceName,
+        (select a.`name` from tbl_area_info a where a.id = s.city_code ) cityName,
+        u.user_id,
+        u.user_name userName,u.certificate_code certificateCode,
+        s.province_code provinceCode,s.city_code cityCode,s.order_unit_name orderUnitName,s.purchaser purchaser,s.purchaser_mobile purchaserMobile,s.product_total_count productTotalCount,s.product_total_amount productTotalAmount,s.order_type orderType,s.order_invoice_status orderInvoiceStatus,
+        s.flow_id flowId,s.order_date orderDate,s.borrow_type borrowType,s.order_status orderStatus,s.return_reason returnReason,s.complate_type complateType,s.receive_name receiveName,s.id orderId,
+        p.product_name productName,p.product_type productType,p.product_number productNumber,p.product_price productPrice,
+        p.product_amount productAmount,p.label_start labelStart,p.label_end labelEnd
+        from `order` s LEFT JOIN order_product p on s.id = p.order_id and s.is_del = p.is_del LEFT JOIN user_info u on s.user_id = u.user_id and s.is_del = u.is_del
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="provinceCode!=null and provinceCode!=''">
+                and s.province_code = #{provinceCode} 
+                <if test="cityCode!=null and cityCode!=''">
+                	and s.city_code = #{cityCode}
+                </if>
+            </if>
+            <if test="orderUnitName!=null and orderUnitName!=''">
+                and s.order_unit_name = #{orderUnitName}
+            </if>
+            <if test="purchaserMobile!=null and purchaserMobile!=''">
+                and s.purchaser_mobile = #{purchaserMobile}
+            </if>
+            <if test="needBeforeInvoice!=null and needBeforeInvoice!=''">
+                and s.need_before_invoice = #{needBeforeInvoice}
+            </if>
+            <if test="borrowType!=null and borrowType!=''">
+                and s.borrow_type = #{borrowType}
+            </if>
+
+
+            <if test="productName!=null and productName!=''">
+                and s.id in (SELECT ps.order_id from order_product ps where ps.product_name like "%"#{productName}"%" and ps.order_id = s.id and ps.is_del = s.is_del)
+            </if>
+            <if test="productName1!=null and productName1!=''">
+                and s.id in (SELECT ps.order_id from order_product ps where ps.product_name = #{productName1} and ps.order_id = s.id and ps.is_del = s.is_del)
+            </if>
+            <if test="productNumber!=null and productNumber!=''">
+              and s.product_total_count = #{productNumber}
+            </if>
+            <if test="productTotalAmount!=null and productTotalAmount!=''">
+                and s.product_total_amount = #{productTotalAmount}
+            </if>
+
+            <if test="orderTypeArray!=null and orderTypeArray.size!=0">
+                and order_type in
+                <foreach collection="orderTypeArray" open="(" close=")" separator="," index="index" item="item">
+                    #{item,jdbcType=VARCHAR}
+                </foreach>
+            </if>
+            <if test="orderDateType=='0'.toString()">
+                <if test="orderDateStart!=null and orderDateStart!=''">
+                    and s.order_date &gt;= #{orderDateStart}
+                </if><if test="orderDateEnd!=null and orderDateEnd!=''">
+                    and s.order_date &lt;= #{orderDateEnd}
+                </if>
+            </if>
+            <if test="orderDateType=='1'.toString()">
+                and <![CDATA[ TO_DAYS(s.order_date) = TO_DAYS(NOW())]]>
+            </if><if test="orderDateType=='2'.toString()">
+                and <![CDATA[ YEARWEEK(DATE_FORMAT(s.order_date,'%Y-%m-%d')) = YEARWEEK(NOW())]]>
+            </if><if test="orderDateType=='3'.toString()">
+                and <![CDATA[  DATE_FORMAT(s.order_date,'%Y-%m') = DATE_FORMAT(NOW(),'%Y-%m')]]>
+            </if><if test="orderDateType=='4'.toString()">
+                and <![CDATA[ QUARTER(s.order_date) = QUARTER(NOW())]]>
+            </if><if test="orderDateType=='5'.toString()">
+                and <![CDATA[ YEAR(s.order_date) = YEAR(NOW())]]>
+            </if>
+            <if test="orderInvoiceStatus!=null and orderInvoiceStatus!=''">
+                and s.order_invoice_status = #{orderInvoiceStatus}
+            </if>
+
+
+            <if test="orderStatusArray!=null and orderStatusArray.size!=0 ">
+                and order_status in
+                <foreach collection="orderStatusArray" open="(" close=")" separator="," index="index" item="item">
+                    #{item,jdbcType=VARCHAR}
+                </foreach>
+            </if>
+
+
+
+            and s.submit_status = 1
+            and s.is_del = FALSE
+        </trim>
+        ORDER BY s.order_date desc,p.product_list_id desc;
+    </select>
+
+    <update id="putOrderProductionMemo" parameterType="OrderProductionMemo">
+        update `order_production_memo` s
+        <trim prefix="set" prefixOverrides=",">
+            <if test="id!=null">,s.`id`=#{id} </if><if test="orderId!=null">,s.`order_id`=#{orderId} </if><if test="memo!=null">,s.`memo`=#{memo} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <update id="putTblReportTask" parameterType="TblReportTask">
+        update `tbl_report_task` s
+        <trim prefix="set" prefixOverrides=",">
+            <if test="id!=null">,s.`id`=#{id} </if><if test="builderTime!=null">,s.`builder_time`=#{builderTime} </if><if test="taskStatus!=null">,s.`task_status`=#{taskStatus} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <update id="putOrderPaid" parameterType="OrderPaid">
+        update `order_paid` s
+        <trim prefix="set" prefixOverrides=",">
+            <if test="id!=null">,s.`id`=#{id} </if><if test="orderId!=null">,s.`order_id`=#{orderId} </if><if test="arrivalDate!=null">,s.`arrival_date`=#{arrivalDate} </if><if test="arrivalAmount!=null">,s.`arrival_amount`=#{arrivalAmount} </if><if test="isTotalArrival!=null">,s.`is_total_arrival`=#{isTotalArrival} </if><if test="arrivalAccount!=null">,s.`arrival_account`=#{arrivalAccount} </if><if test="remitter!=null">,s.`remitter`=#{remitter} </if><if test="arrivalMessage!=null">,s.`arrival_message`=#{arrivalMessage} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <update id="putOrderExpress" parameterType="OrderExpress">
+        update `order_express` s
+        <trim prefix="set" prefixOverrides=",">
+           <if test="id!=null">,s.`id`=#{id} </if><if test="productionFlowId!=null and productionFlowId!=''">,s.`production_flow_id`=#{productionFlowId} </if><if test="orderId!=null">,s.`order_id`=#{orderId} </if><if test="orderParentId!=null">,s.`order_parent_id`=#{orderParentId} </if><if test="expressType!=null">,s.`express_type`=#{expressType} </if><if test="expressName!=null">,s.`express_name`=#{expressName} </if><if test="expressNo!=null">,s.`express_no`=#{expressNo} </if><if test="deliveryDate!=null">,s.`delivery_date`=#{deliveryDate} </if><if test="expressMessage!=null">,s.`express_message`=#{expressMessage} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <update id="putOrderInvoiceExpress" parameterType="OrderInvoiceExpress">
+        UPDATE `order_invoice_express` s
+        <trim prefix="set" prefixOverrides=",">
+            <if test="id!=null">,s.`id`=#{id} </if><if test="orderId!=null">,s.`order_id`=#{orderId} </if> <if test="flowId!=null">,s.`flow_id`=#{flowId} </if> <if test="orderParentId!=null">,s.`order_parent_id`=#{orderParentId} </if><if test="expressName!=null">,s.`express_name`=#{expressName} </if><if test="expressNo!=null">,s.`express_no`=#{expressNo} </if><if test="deliveryDate!=null">,s.`delivery_date`=#{deliveryDate} </if><if test="expressMessage!=null">,s.`express_message`=#{expressMessage} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <insert id="postOrderElectronicInvoice" parameterType="OrderElectronicInvoice">
+        INSERT INTO `order_electronic_invoice` (`id`, `order_id`, `flow_id`, `name`, `file_name`, `file_server_name`, `date_created`, `date_modified`, `user_created`, `user_modified`, `is_del`) VALUES (#{id},#{orderId},#{flowId},#{name},#{fileName},#{fileServerName},#{dateCreated},#{dateModified},#{userCreated},#{userModified},#{isDel});
+    </insert>
+
+    <update id="putOrderElectronicInvoice" parameterType="OrderElectronicInvoice">
+        update `order_electronic_invoice` s
+        <trim prefix="set" prefixOverrides=",">
+            <if test="id!=null">,s.`id`=#{id} </if><if test="orderId!=null">,s.`order_id`=#{orderId} </if><if test="flowId!=null">,s.`flow_id`=#{flowId} </if><if test="name!=null">,s.`name`=#{name} </if><if test="fileName!=null">,s.`file_name`=#{fileName} </if><if test="fileServerName!=null">,s.`file_server_name`=#{fileServerName} </if><if test="dateCreated!=null">,s.`date_created`=#{dateCreated} </if><if test="dateModified!=null">,s.`date_modified`=#{dateModified} </if><if test="userCreated!=null">,s.`user_created`=#{userCreated} </if><if test="userModified!=null">,s.`user_modified`=#{userModified} </if><if test="isDel!=null">,s.`is_del`=#{isDel} </if>
+        </trim>
+        where s.`id`=#{id}
+    </update>
+
+    <select id="getOrderElectronicInvoice" resultType="OrderElectronicInvoice" parameterType="java.util.Map">
+        select s.id id,s.order_id orderId,s.flow_id flowId,s.`name` `name`,s.file_name fileName,s.file_server_name fileServerName,s.date_created dateCreated,s.date_modified dateModified,s.user_created userCreated,s.user_modified userModified,s.is_del isDel from order_electronic_invoice s
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="id!=null"> and s.id=#{id} </if><if test="orderId!=null"> and s.order_id=#{orderId} </if><if test="flowId!=null"> and s.flow_id=#{flowId} </if><if test="name!=null"> and s.`name`=#{name} </if><if test="fileName!=null"> and s.file_name=#{fileName} </if><if test="fileServerName!=null"> and s.file_server_name=#{fileServerName} </if><if test="dateCreated!=null"> and s.date_created=#{dateCreated} </if><if test="dateModified!=null"> and s.date_modified=#{dateModified} </if><if test="userCreated!=null"> and s.user_created=#{userCreated} </if><if test="userModified!=null"> and s.user_modified=#{userModified} </if><if test="isDel!=null"> and s.is_del=#{isDel} </if>
+            and s.is_del = false;
+        </trim>
+    </select>
+
+</mapper>
